@@ -1,9 +1,9 @@
-.navigation{
-background: yellow;
+.navigation {
+  background: yellow;
 }
-.navigation-bar{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 2%;
+.navigation-bar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 2%;
 }
