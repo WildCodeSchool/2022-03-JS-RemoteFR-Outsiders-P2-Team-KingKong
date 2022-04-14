@@ -27,11 +27,7 @@ function ShowCocktail({ drinks }) {
       <div className="row" />
       <div className="recipe">
         <h3>
-          <i
-            class="em em-tropical_drink"
-            aria-role="presentation"
-            aria-label="TROPICAL DRINK"
-          ></i>
+          <i className="em em-tropical_drink" aria-label="TROPICAL DRINK" />
           Recipe
         </h3>
         <p>{drinks.strInstructions}</p>
