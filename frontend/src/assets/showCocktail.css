@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
 }
-h1{
+h1 {
   margin: 1rem;
 }
 .ingredients {
@@ -37,19 +37,19 @@ ul {
 h2 {
   margin: 0 0 0.8rem 0;
 }
-p, ul{
+p,
+ul {
   font-size: var(---font-size--p);
 }
 img {
   width: 100%;
 }
-p{
+p {
   line-height: var(---line-height--p);
 }
 
 @media screen and (min-width: 400px) {
   .cocktailContainer {
-    
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -59,7 +59,6 @@ p{
   }
 
   .drinkName {
-
     width: 96%;
     text-align: left;
   }
@@ -77,7 +76,7 @@ p{
   .row {
     display: none;
   }
-  
+
   ul {
     margin: 0;
     list-style-type: square;

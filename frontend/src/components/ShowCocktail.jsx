@@ -9,11 +9,7 @@ function ShowCocktail({ drinks }) {
         <h1>{drinks.strDrink}</h1>
         <p>
           Ajouter dans mes favoris{" "}
-          <i
-            class="em em-heart"
-            aria-role="presentation"
-            aria-label="HEAVY BLACK HEART"
-          ></i>{" "}
+          <i className="em em-heart" aria-label="HEAVY BLACK HEART" />{" "}
         </p>
       </div>
 
