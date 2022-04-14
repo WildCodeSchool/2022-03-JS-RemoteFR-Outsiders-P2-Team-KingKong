@@ -1,5 +1,6 @@
 import Counter from "@components/Counter";
 import logo from "@assets/logo.svg";
+import Footer from "@components/Footer";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
           Vite Docs
         </a>
       </p>
+      <Footer />
     </header>
   );
 }
