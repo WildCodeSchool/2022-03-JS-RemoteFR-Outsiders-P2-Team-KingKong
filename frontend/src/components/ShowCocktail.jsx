@@ -1,17 +1,26 @@
 import React from "react";
 import "../assets/showCocktail.css";
+import "../assets/style.css";
 
 function ShowCocktail({ drinks }) {
   return (
     <div className="cocktailContainer">
       <div className="drinkName">
         <h1>{drinks.strDrink}</h1>
+        <p>
+          Ajouter dans mes favoris{" "}
+          <i
+            class="em em-heart"
+            aria-role="presentation"
+            aria-label="HEAVY BLACK HEART"
+          ></i>{" "}
+        </p>
       </div>
 
       <img src={drinks.strDrinkThumb} alt={drinks.strDrink} />
 
       <div className="ingredients">
-        <h3> Ingredients</h3>
+        <h2> Ingredients</h2>
         <ul>
           <li>
             {drinks.strMeasure1} -- {drinks.strIngredient1}
@@ -26,10 +35,10 @@ function ShowCocktail({ drinks }) {
       </div>
       <div className="row" />
       <div className="recipe">
-        <h3>
+        <h2>
           <i className="em em-tropical_drink" aria-label="TROPICAL DRINK" />
           Recipe
-        </h3>
+        </h2>
         <p>{drinks.strInstructions}</p>
       </div>
     </div>

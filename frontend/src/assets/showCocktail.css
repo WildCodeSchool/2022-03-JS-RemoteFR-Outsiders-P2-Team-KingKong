@@ -1,18 +1,20 @@
 .cocktailContainer {
-  background-color: #06070e;
+  background-color: var(---background-first-color);
 
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+h1{
+  margin: 1rem;
+}
 .ingredients {
   margin: 1.5rem 0 1.5rem 0;
   padding: 1rem 0 1rem 0;
-  background-color: rgba(43, 44, 47, 0.757);
+  background-color: var(---background-third-color);
   width: 35vh;
-  border-radius: 1rem;
+  border-radius: var(---border-radius);
 }
 .row {
   height: 0.1rem;
@@ -29,20 +31,25 @@ ul {
   margin: 0;
   list-style-type: square;
   text-align: left;
-  line-height: 1.8rem;
+  line-height: var(---line-height--ul);
 }
 
-h3 {
-  font-size: 1.5rem;
+h2 {
   margin: 0 0 0.8rem 0;
+}
+p, ul{
+  font-size: var(---font-size--p);
 }
 img {
   width: 100%;
 }
+p{
+  line-height: var(---line-height--p);
+}
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 400px) {
   .cocktailContainer {
-    background-color: #06070e;
+    
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -52,16 +59,16 @@ img {
   }
 
   .drinkName {
+
     width: 96%;
     text-align: left;
   }
   .ingredients {
     margin: 1.5rem 0 1.5rem 0;
     padding: 2rem 0 2rem 0;
-    background-color: rgba(43, 44, 47, 0.757);
+    background-color: var(---background-third-color);
     width: 50%;
     height: auto;
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,18 +77,14 @@ img {
   .row {
     display: none;
   }
-  .recipe {
-    margin: 1rem;
-    text-align: left;
-  }
-
+  
   ul {
     margin: 0;
     list-style-type: square;
     line-height: 3rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.5rem;
     margin: 0 0 0.8rem 0;
   }
