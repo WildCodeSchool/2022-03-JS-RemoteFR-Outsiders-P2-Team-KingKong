@@ -177,11 +177,22 @@ function Card() {
     },
   ];
 
-  //    function buttonLike(){
+  //   function handleclick() {
+  //     const togg1 = document.getElementById("togg1");
+  //     const togg2 = document.getElementById("togg2");
+  //     if (togg1.style.display === "none") {
+  //       togg1.style.display = "block";
+  //       togg2.style.display = "none";
+  //     } else {
+  //       togg1.style.display = "none";
+  //       togg2.style.display = "block";
+  //     }
 
-  //     document.getElementById('modifclasse').className = "fa-light fa-heart";
-
-  //    }
+  //
+  const [button, setButton] = React.useState(false);
+  function clickButton() {
+    setButton(!button);
+  }
   return (
     <div className="vignette">
       {drink.map((nameDrink) => (
@@ -192,9 +203,16 @@ function Card() {
             alt="cocktail"
           />
           <div className="blocText">
-            {/* <a onClick={buttonLike}><i id="modifclasse" class="fa-solid fa-heart"></i></a> */}
+            <button onClick={clickButton}>
+              {button ? (
+                <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
+              ) : (
+                <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
+              )}
+            </button>
             <h2>{nameDrink.strDrink}</h2>
-            <p>{nameDrink.strInstructions}</p>
+            {/* <p>{nameDrink.strInstructions}</p> */}
+            <a href="#">cocktail recipe</a>
           </div>
         </article>
       ))}

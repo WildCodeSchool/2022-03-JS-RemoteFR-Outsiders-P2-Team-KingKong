@@ -26,12 +26,20 @@
 .articleVignette > div > h2 {
   margin-bottom: 1rem;
 }
-#root > div > div > article > div > a > i {
+#root > div > div > article > div > button > i {
   color: red;
   font-size: 2rem;
 }
+#root > div > div > article > div > button {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .blocText {
   width: 100%;
+  position: relative;
 }
 
 @media screen and (min-width: 640px) {
