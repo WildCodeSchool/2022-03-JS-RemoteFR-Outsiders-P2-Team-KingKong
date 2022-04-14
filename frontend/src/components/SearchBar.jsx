@@ -4,12 +4,11 @@ import "../assets/searchbar.css";
 
 function SearchBar(props) {
   const { searchValue, handleSearchValue } = props;
-  console.log(props);
   return (
     <div className="full-searchbar">
       <div className="searchbar">
         <input
-        value={searchValue}
+          value={searchValue}
           type="text"
           placeholder="Mojito..."
           className="input"

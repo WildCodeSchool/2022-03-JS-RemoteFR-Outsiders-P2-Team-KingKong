@@ -1,25 +1,29 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import SearchBar from "../components/SearchBar";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
-  const [cocktails, setCocktail] = useState([
+  const [cocktails] = useState([
     "Margarita",
     "Blue Margarita",
     "Mojito",
     "Old Fashioned",
-    "Whiskey Sour"
-]);
+    "Whiskey Sour",
+  ]);
 
   return (
     <div>
       <header>
-        <SearchBar searchValue={searchValue} handleSearchValue={setSearchValue} />
+        <SearchBar
+          searchValue={searchValue}
+          handleSearchValue={setSearchValue}
+        />
       </header>
-      {cocktails.filter((cocktail) => cocktail.includes(searchValue))
-      .map((cocktail) => (
-        <p>{cocktail}</p>
-      ))}
+      {cocktails
+        .filter((cocktail) => cocktail.includes(searchValue))
+        .map((cocktail) => (
+          <p>{cocktail}</p>
+        ))}
     </div>
   );
 }
