@@ -1,20 +1,32 @@
 .btn {
-    width: 20%;
+  width: 20%;
+  background-color: white;
 }
-.image-logo{
-width: 20px;
+.image-logo {
+  width: 20px;
 }
-.input{
-padding: 4%;
-width: 100%;
+.input {
+  width: 80vw;
 }
-.searchbar{
-    width: 90%;
-    display:flex;
-    justify-content: center;
+.searchbar {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+.full-searchbar {
+  display: flex;
+  justify-content: center;
+}
 
-}
-.full-searchbar{
+@media screen and (min-width : 768px) {
+  .full-searchbar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-left: 5%;
+  }
+  .searchbar{
+    width: 40vw;
+    margin-right: 3%;
+  }
+
 }
