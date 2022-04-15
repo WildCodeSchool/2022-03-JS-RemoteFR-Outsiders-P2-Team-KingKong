@@ -1,5 +1,6 @@
 import React from "react";
 import ShowCocktail from "../components/ShowCocktail";
+import Footer from "@components/Footer";
 
 const drinks = {
   strDrink: "Margarita",
@@ -24,6 +25,7 @@ function Home() {
   return (
     <header className="App-header">
       <ShowCocktail drinks={drinks} />
+      <Footer />
     </header>
   );
 }
