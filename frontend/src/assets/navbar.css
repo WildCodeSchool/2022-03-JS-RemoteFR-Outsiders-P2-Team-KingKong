@@ -1,5 +1,5 @@
 .navigation {
-  background: #EF8C16;
+  background: #ef8c16;
 }
 .navigation-bar {
   display: flex;
@@ -7,7 +7,7 @@
   list-style: none;
   padding: 2%;
 }
-a{
+a {
   outline: none;
   text-decoration: none;
   color: black;
@@ -17,7 +17,7 @@ a{
     margin-right: 5%;
     width: 60vw;
   }
-  .navigation-bar{
+  .navigation-bar {
     display: flex;
     justify-content: flex-start;
   }

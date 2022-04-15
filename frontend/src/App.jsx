@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Random from './pages/Random';
-import PopularCocktail from './pages/PopularCocktail';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Random from "./pages/Random";
+import PopularCocktail from "./pages/PopularCocktail";
 import Home from "./pages/Home";
 import "./assets/navbar.css";
 
