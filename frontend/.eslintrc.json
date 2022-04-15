@@ -19,6 +19,7 @@
   "rules": {
     "react/prop-types": 0,
     "no-console": "off",
+    "react/prop-types": 0,
     "no-restricted-syntax": [
       "error",
       {
