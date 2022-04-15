@@ -1,0 +1,27 @@
+.navigation {
+  background: #ef8c16;
+}
+.navigation-bar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 2%;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    margin-right: 5%;
+    width: 60vw;
+  }
+  .navigation-bar {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .navigation-name {
+    margin-left: 10%;
+  }
+}

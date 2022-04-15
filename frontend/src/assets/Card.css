@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+}
+
+.imgCocktail {
+  width: 100%;
+}
+.vignette {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.articleVignette {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 6rem;
+  padding: 15px;
+  background-color: #ef8c16;
+}
+.articleVignette > img {
+  margin-bottom: 1rem;
+}
+.articleVignette > div > h2 {
+  margin-bottom: 1rem;
+}
+#root > div > div > article > div > button > i {
+  color: red;
+  font-size: 2rem;
+}
+#root > div > div > article > div > button {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.blocText {
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 640px) {
+  .imgCocktail {
+    width: 50%;
+  }
+  .articleVignette {
+    display: flex;
+    flex-direction: row;
+  }
+}
