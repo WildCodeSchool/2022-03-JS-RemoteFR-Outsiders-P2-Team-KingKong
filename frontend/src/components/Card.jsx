@@ -203,7 +203,7 @@ function Card() {
             alt="cocktail"
           />
           <div className="blocText">
-            <button onClick={clickButton}>
+            <button onClick={clickButton} type="button">
               {button ? (
                 <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
               ) : (
@@ -212,7 +212,7 @@ function Card() {
             </button>
             <h2>{nameDrink.strDrink}</h2>
             {/* <p>{nameDrink.strInstructions}</p> */}
-            <a href="#">cocktail recipe</a>
+            <p>cocktail recipe</p>
           </div>
         </article>
       ))}
