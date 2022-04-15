@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Random from './pages/Random';
-import PopularCocktail from './pages/PopularCocktail';
-import Home from "./pages/Home";
+import Random from '@pages/Random';
+import PopularCocktail from '@pages/PopularCocktail';
+import Card from "@components/Card";
+import Home from "@pages/Home";
 import "./assets/navbar.css";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/random" element={<Random />} />
           <Route path="/popularcocktail" element={<PopularCocktail />} />
         </Routes>
+      <Card />
       </div>
     </Router>
   );
