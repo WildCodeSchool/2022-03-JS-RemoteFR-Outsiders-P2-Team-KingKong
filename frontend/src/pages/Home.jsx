@@ -1,6 +1,16 @@
-import React from "react";
-import ShowCocktail from "../components/ShowCocktail";
+import React, { useState } from "react";
+import SearchBar from "@components/SearchBar";
+import ShowCocktail from "@components/ShowCocktail";
 import Footer from "@components/Footer";
+
+const [searchValue, setSearchValue] = useState("");
+  const [cocktails] = useState([
+    "Margarita",
+    "Blue Margarita",
+    "Mojito",
+    "Old Fashioned",
+    "Whiskey Sour",
+  ]);
 
 const drinks = {
   strDrink: "Margarita",
@@ -25,6 +35,15 @@ function Home() {
   return (
     <header className="App-header">
       <ShowCocktail drinks={drinks} />
+      <SearchBar
+          searchValue={searchValue}
+          handleSearchValue={setSearchValue}
+        />
+        {cocktails
+        .filter((cocktail) => cocktail.includes(searchValue))
+        .map((cocktail) => (
+          <p>{cocktail}</p>
+        ))}
       <Footer />
     </header>
   );
