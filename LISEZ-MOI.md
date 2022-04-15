@@ -47,3 +47,4 @@ Vérifications:
 - s'assurer que les principaux outils utilisés lors de la formation sont compatibles avec ce template
 - deploiements ? Compatible avec Netlify/Vercel/Heroku ?
 - fonctionnement avec yarn/pnpm
+

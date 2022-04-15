@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --neon-bg-color-2: #12c4e8; /* bleu 006eff */
+  --neon-bg-color-1: #ff51f3; /* rose */
+  --neon-bg-color: #74ea62; /* vert */
+}
+
+.banner{
+  width:100%;
+  height:600px;
+  background-color:#777;
+  background-image:url('banner-wall.jpg');
+  background-size:cover;
+  background-position:center;
+  background-blend-mode:multiply;
+  padding-top:6rem;
+  text-align:center;
+}
+
+
+.banner > img{
+	width:300px;
+	height:auto;
+	margin:10px auto 0px auto;
+  
+}
+
+.banner > p{
+	color:#fff;
+	font-size:5rem;
+  margin-top:-100px;
+}
+
+.banner > p.brandText{
+  margin-top:50px;
+  font-size: 1.5rem !important;
+}
+
+.neonText{
+  font-family: 'Pacifico', cursive;
+  font-weight:500;
+  color:white;
+  margin:auto;
+  transform: rotate(-10deg);
+  color: #fff;
+  animation: flicker 5s infinite alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px var(--neon-bg-color),
+      0 0 80px var(--neon-bg-color),
+      0 0 90px var(--neon-bg-color),
+      0 0 100px var(--neon-bg-color),
+      0 0 150px var(--neon-bg-color);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
