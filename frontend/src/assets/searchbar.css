@@ -7,6 +7,9 @@
 }
 .input {
   width: 80vw;
+  padding: 2%;
+  color: black;
+  font-weight: 500;
 }
 .searchbar {
   width: 80vw;
