@@ -5,9 +5,7 @@ export default function Banner() {
   return (
     <div className="banner">
       <img src={logo} alt="logo Le mixAndDrink" />
-      <p className="neonText">Mix & Drink</p>
-
-      <p className="brandText">Cherchez votre bonheur</p>
+      <h1 className="neonText">Mix & Drink</h1>
     </div>
   );
 }
