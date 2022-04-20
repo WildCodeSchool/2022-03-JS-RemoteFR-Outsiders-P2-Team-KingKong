@@ -3,13 +3,13 @@ import SearchBar from "../components/SearchBar";
 
 function Home() {
   const [searchValue, setSearchValue] = useState("");
-  const [cocktails] = useState([
-    "Margarita",
-    "Blue Margarita",
-    "Mojito",
-    "Old Fashioned",
-    "Whiskey Sour",
-  ]);
+  // const [cocktails ] = useState([
+  //   "Margarita",
+  //   "Blue Margarita",
+  //   "Mojito",
+  //   "Old Fashioned",
+  //   "Whiskey Sour",
+  // ]);
 
   // const drinks = {
   //   strDrink: "Margarita",
@@ -38,11 +38,11 @@ function Home() {
           searchValue={searchValue}
           handleSearchValue={setSearchValue}
         />
-        {cocktails
+        {/* {cocktails
           .filter((cocktail) => cocktail.includes(searchValue))
           .map((cocktail) => (
             <p>{cocktail}</p>
-          ))}
+          ))} */}
       </main>
     </div>
   );

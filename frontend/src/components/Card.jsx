@@ -200,14 +200,14 @@ function Card() {
                 <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
               )}
             </button>
-            <h2>{nameDrink.strDrink}</h2>
+            <h3>{nameDrink.strDrink}</h3>
 
             <Router>
               <Routes>
-                <Route
+                {/* <Route
                   path="/components/ShowCocktail"
                   element={<ShowCocktail drinks={drinks} />}
-                />
+                /> */}
               </Routes>
               <Link to="/components/ShowCocktail" drinks={drinks}>
                 cocktail recipe
