@@ -26,11 +26,12 @@
 .articleVignette > div > h2 {
   margin-bottom: 1rem;
 }
-#root > div > div > article > div > button > i {
+article.articleVignette > div > button > i {
   color: red;
   font-size: 2rem;
 }
-#root > div > div > article > div > button {
+
+article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
   background-color: transparent;
   border: 0;
   position: absolute;

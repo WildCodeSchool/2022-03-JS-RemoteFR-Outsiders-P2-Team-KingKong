@@ -1,9 +1,11 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Random from '@pages/Random';
-import PopularCocktail from '@pages/PopularCocktail';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Random from "@pages/Random";
+import PopularCocktail from "@pages/PopularCocktail";
 import Banner from "@components/Banner";
 import Home from "@pages/Home";
 import "@assets/navbar.css";
+import Footer from "@components/Footer";
+import Card from "@components/Card";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Card />
+      <Footer />
     </div>
   );
 }

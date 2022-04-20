@@ -1,9 +1,11 @@
 import React from "react";
 import "../assets/Card.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import ShowCocktail from "@components/ShowCocktail";
 
 function Card() {
   // usestate drink de test avant l api
-  const drink = [
+  const drinks = [
     {
       idDrink: "11007",
       strDrink: "Margarita",
@@ -177,25 +179,13 @@ function Card() {
     },
   ];
 
-  //   function handleclick() {
-  //     const togg1 = document.getElementById("togg1");
-  //     const togg2 = document.getElementById("togg2");
-  //     if (togg1.style.display === "none") {
-  //       togg1.style.display = "block";
-  //       togg2.style.display = "none";
-  //     } else {
-  //       togg1.style.display = "none";
-  //       togg2.style.display = "block";
-  //     }
-
-  //
   const [button, setButton] = React.useState(false);
   function clickButton() {
     setButton(!button);
   }
   return (
     <div className="vignette">
-      {drink.map((nameDrink) => (
+      {drinks.map((nameDrink) => (
         <article className="articleVignette">
           <img
             className="imgCocktail"
@@ -211,8 +201,18 @@ function Card() {
               )}
             </button>
             <h2>{nameDrink.strDrink}</h2>
-            {/* <p>{nameDrink.strInstructions}</p> */}
-            <p>cocktail recipe</p>
+
+            <Router>
+              <Routes>
+                <Route
+                  path="/components/ShowCocktail"
+                  element={<ShowCocktail drinks={drinks} />}
+                />
+              </Routes>
+              <Link to="/components/ShowCocktail" drinks={drinks}>
+                cocktail recipe
+              </Link>
+            </Router>
           </div>
         </article>
       ))}
