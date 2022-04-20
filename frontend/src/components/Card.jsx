@@ -185,38 +185,40 @@ function Card() {
   }
   return (
     <div className="vignette">
-      {drinks.map((nameDrink) => (
-        <article className="articleVignette">
-          <img
-            className="imgCocktail"
-            src={nameDrink.strDrinkThumb}
-            alt="cocktail"
-          />
-          <div className="blocText">
-            <button onClick={clickButton} type="button">
-              {button ? (
-                <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
-              ) : (
-                <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
-              )}
-            </button>
-            <h3>{nameDrink.strDrink}</h3>
+                <Router>
+                      <Routes>
+                              <Route
+                              path="/components/ShowCocktail"
+                              element={<ShowCocktail drinks={drinks} />}
+                            />
+                    </Routes>
+                </Router>
+                {drinks.map((nameDrink) => (
+                  <article key={nameDrink.idDrink}className="articleVignette">
+                    <img
+                      className="imgCocktail"
+                      src={nameDrink.strDrinkThumb}
+                      alt="cocktail"
+                    />
+                    <div className="blocText">
+                      <button onClick={clickButton} type="button">
+                        {button ? (
+                          <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
+                        ) : (
+                          <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
+                        )}
+                      </button>
+                      <h3>{nameDrink.strDrink}</h3>
 
-            <Router>
-              <Routes>
-                {/* <Route
-                  path="/components/ShowCocktail"
-                  element={<ShowCocktail drinks={drinks} />}
-                /> */}
-              </Routes>
-              <Link to="/components/ShowCocktail" drinks={drinks}>
-                cocktail recipe
-              </Link>
-            </Router>
-          </div>
-        </article>
-      ))}
-    </div>
+                      <Router>
+                        <Link to="/components/ShowCocktail" drinks={drinks}>
+                          cocktail recipe
+                        </Link>
+                      </Router>
+                    </div>
+                  </article>
+                ))}
+              </div>
   );
 }
 

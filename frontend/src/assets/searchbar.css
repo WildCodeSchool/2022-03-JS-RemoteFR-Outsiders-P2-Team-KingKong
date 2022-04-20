@@ -18,14 +18,12 @@
   justify-content: center;
   background: #ef8c16;
   padding-bottom: 2rem;
-  
 }
 
 @media screen and (min-width: 768px) {
   .full-searchbar {
     display: flex;
     justify-content: flex-end;
-    
   }
   .searchbar {
     width: 40vw;
