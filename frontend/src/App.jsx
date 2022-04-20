@@ -5,6 +5,7 @@ import PopularCocktail from "@pages/PopularCocktail";
 import Banner from "@components/Banner";
 import Home from "@pages/Home";
 import "@assets/navbar.css";
+import ShowCocktail from "@components/ShowCocktail";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/random" element={<Random />} />
-            <Route path="/popularcocktail" element={<PopularCocktail />} />
+            <Route path="/popular-cocktail" element={<PopularCocktail />} />
+            <Route path="/show-cocktail" element={<ShowCocktail />} />
           </Routes>
         </div>
       </Router>
