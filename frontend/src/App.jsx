@@ -1,11 +1,13 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Random from '@pages/Random';
-import PopularCocktail from '@pages/PopularCocktail';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Random from "@pages/Random";
+import PopularCocktail from "@pages/PopularCocktail";
 import Banner from "@components/Banner";
 import Home from "@pages/Home";
 import "@assets/navbar.css";
+import getCocktailByName from "@services/getCocktail";
 
 function App() {
+  getCocktailByName("mojito", 3, 1);
   return (
     <div>
       <Banner />
