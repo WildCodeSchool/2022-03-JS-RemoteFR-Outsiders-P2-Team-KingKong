@@ -1,7 +1,5 @@
 import React from "react";
 import "../assets/Card.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import ShowCocktail from "@components/ShowCocktail";
 
 function Card() {
   // usestate drink de test avant l api
@@ -185,40 +183,27 @@ function Card() {
   }
   return (
     <div className="vignette">
-                <Router>
-                      <Routes>
-                              <Route
-                              path="/components/ShowCocktail"
-                              element={<ShowCocktail drinks={drinks} />}
-                            />
-                    </Routes>
-                </Router>
-                {drinks.map((nameDrink) => (
-                  <article key={nameDrink.idDrink}className="articleVignette">
-                    <img
-                      className="imgCocktail"
-                      src={nameDrink.strDrinkThumb}
-                      alt="cocktail"
-                    />
-                    <div className="blocText">
-                      <button onClick={clickButton} type="button">
-                        {button ? (
-                          <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
-                        ) : (
-                          <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
-                        )}
-                      </button>
-                      <h3>{nameDrink.strDrink}</h3>
-
-                      <Router>
-                        <Link to="/components/ShowCocktail" drinks={drinks}>
-                          cocktail recipe
-                        </Link>
-                      </Router>
-                    </div>
-                  </article>
-                ))}
-              </div>
+      {drinks.map((namedrinks) => (
+        <article key={namedrinks.idDrink} className="articleVignette">
+          <img
+            className="imgCocktail"
+            src={namedrinks.strDrinkThumb}
+            alt="cocktail"
+          />
+          <div className="blocText">
+            <button onClick={clickButton} type="button">
+              {button ? (
+                <i id={namedrinks.idDrink} className="fa-regular fa-heart" />
+              ) : (
+                <i id={namedrinks.idDrink} className="fa-solid fa-heart" />
+              )}
+            </button>
+            <h3>{namedrinks.strDrink}</h3>
+            <p>{namedrinks.strAlcoholic}</p>
+          </div>
+        </article>
+      ))}
+    </div>
   );
 }
 

@@ -57,7 +57,7 @@ article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
   .articleVignette {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 37%;
   }
   .vignette {
     display: flex;
