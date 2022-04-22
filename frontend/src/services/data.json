@@ -119,7 +119,8 @@
             "strIngredient2": "Chocolate",
             "strIngredient3": "Orange peel",
             "strIngredient4": "Espresso",
-            "strIngredient5": "Nutmeg"
+            "strIngredient5": "Nutmeg",
+            "strCategory": "Cocoa"
         }
     ]
 }
