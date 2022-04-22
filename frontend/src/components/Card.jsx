@@ -1,6 +1,6 @@
 import React from "react";
-import "../assets/Card.css";
 import { Link } from "react-router-dom";
+import "@assets/Card.css";
 
 function Card() {
   // usestate drink de test avant l api
@@ -185,8 +185,8 @@ function Card() {
   return (
     <div>
       <div className="vignette">
-        {drink.map((nameDrink) => (
-          <article className="articleVignette">
+        {drinks.map((nameDrink, key) => (
+          <article className="articleVignette" key={key}>
             <Link to="/show-cocktail">
               <img
                 className="imgCocktail"
@@ -203,7 +203,6 @@ function Card() {
                 )}
               </button>
               <h2>{nameDrink.strDrink}</h2>
-              {/* <p>{nameDrink.strInstructions}</p> */}
               <p>cocktail recipe</p>
             </div>
           </article>

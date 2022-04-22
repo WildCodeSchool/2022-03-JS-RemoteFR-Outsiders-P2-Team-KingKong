@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import PopularCocktail from "@pages/PopularCocktail";
 import Random from "@pages/Random";
 import Home from "@pages/Home";
@@ -12,11 +12,10 @@ import getCocktailByName from "@services/getCocktail";
 import "@assets/navbar.css";
 
 function App() {
-  getCocktailByName("mojito", 3, 1);
+  // getCocktailByName("mojito", 3, 1);
   return (
     <div>
       <Banner />
-      <Router>
         <div>
           <NavBar />
           <Routes>
@@ -26,7 +25,6 @@ function App() {
             <Route path="/show-cocktail" element={<ShowCocktail />} />
           </Routes>
         </div>
-      </Router>
       <Card />
       <Footer />
     </div>
