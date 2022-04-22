@@ -14,14 +14,17 @@ a {
 }
 @media screen and (min-width: 768px) {
   .navigation {
-    margin-right: 5%;
-    width: 60vw;
+    display: flex;
+    align-items: center;
   }
   .navigation-bar {
+    width: 50%;
     display: flex;
     justify-content: flex-start;
   }
+
   .navigation-name {
     margin-left: 10%;
+    line-height: 1.2;
   }
 }

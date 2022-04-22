@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import SearchBar from "@components/SearchBar";
 import "../assets/navbar.css";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [searchValue, setSearchValue] = useState("");
+  const [cocktails] = useState(["Margarita", "Mojito"]);
   return (
-    <div>
+    <div className="full-navigation">
       <nav className="navigation">
         <ul className="navigation-bar">
           <li className="navigation-name">
@@ -17,6 +21,15 @@ function NavBar() {
             <Link to="/popularcocktail">Popular Cocktail</Link>
           </li>
         </ul>
+        <SearchBar
+          searchValue={searchValue}
+          handleSearchValue={setSearchValue}
+        />
+        {cocktails
+          .filter((cocktail) => cocktail.includes(searchValue))
+          .map((cocktail) => (
+            <p>{cocktail}</p>
+          ))}
       </nav>
     </div>
   );

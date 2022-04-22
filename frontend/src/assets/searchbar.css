@@ -7,6 +7,9 @@
 }
 .input {
   width: 80vw;
+  padding: 2%;
+  color: black;
+  font-weight: 500;
 }
 .searchbar {
   width: 80vw;
@@ -16,13 +19,14 @@
 .full-searchbar {
   display: flex;
   justify-content: center;
+  background: #ef8c16;
+  padding-bottom: 2rem;
 }
 
 @media screen and (min-width: 768px) {
   .full-searchbar {
     display: flex;
     justify-content: flex-end;
-    margin-left: 5%;
   }
   .searchbar {
     width: 40vw;

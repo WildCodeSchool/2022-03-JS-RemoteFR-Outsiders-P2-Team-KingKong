@@ -1,13 +1,18 @@
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavBar from "@components/NavBar";
-import Random from "@pages/Random";
 import PopularCocktail from "@pages/PopularCocktail";
-import Banner from "@components/Banner";
+import Random from "@pages/Random";
 import Home from "@pages/Home";
-import "@assets/navbar.css";
+import Banner from "@components/Banner";
+import Footer from "@components/Footer";
+import Card from "@components/Card";
+import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
+import getCocktailByName from "@services/getCocktail";
+import "@assets/navbar.css";
 
 function App() {
+  getCocktailByName("mojito", 3, 1);
   return (
     <div>
       <Banner />
@@ -22,6 +27,8 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Card />
+      <Footer />
     </div>
   );
 }
