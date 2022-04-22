@@ -1,31 +1,23 @@
+import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Random from "@pages/Random";
 import PopularCocktail from "@pages/PopularCocktail";
-import Banner from "@components/Banner";
+import Random from "@pages/Random";
 import Home from "@pages/Home";
-import "@assets/navbar.css";
+import Banner from "@components/Banner";
 import Footer from "@components/Footer";
 import Card from "@components/Card";
+import NavBar from "@components/NavBar";
+import getCocktailByName from "@services/getCocktail";
+import "@assets/navbar.css";
 
 function App() {
+  getCocktailByName("mojito", 3, 1);
   return (
     <div>
       <Banner />
       <Router>
         <div>
-          <nav className="navigation">
-            <ul className="navigation-bar">
-              <li className="navigation-name">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="navigation-name">
-                <Link to="/random">Random Cocktail</Link>
-              </li>
-              <li className="navigation-name">
-                <Link to="/popularcocktail">Popular Cocktail</Link>
-              </li>
-            </ul>
-          </nav>
+          <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/random" element={<Random />} />
