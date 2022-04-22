@@ -6,7 +6,7 @@ export default function Banner() {
     <div className="banner">
       <img src={logo} alt="logo Le mixAndDrink" />
       <h1 className="neonText">Mix & Drink</h1>
-      <i class="fa-solid fa-chevron-down"></i>
+      <i className="fa-solid fa-chevron-down"></i>
     </div>
   );
 }
