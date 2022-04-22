@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/Card.css";
+import { Link } from "react-router-dom";
 
 function Card() {
   // usestate drink de test avant l api
@@ -182,27 +183,32 @@ function Card() {
     setButton(!button);
   }
   return (
-    <div className="vignette">
-      {drinks.map((namedrinks) => (
-        <article key={namedrinks.idDrink} className="articleVignette">
-          <img
-            className="imgCocktail"
-            src={namedrinks.strDrinkThumb}
-            alt="cocktail"
-          />
-          <div className="blocText">
-            <button onClick={clickButton} type="button">
-              {button ? (
-                <i id={namedrinks.idDrink} className="fa-regular fa-heart" />
-              ) : (
-                <i id={namedrinks.idDrink} className="fa-solid fa-heart" />
-              )}
-            </button>
-            <h3>{namedrinks.strDrink}</h3>
-            <p>{namedrinks.strAlcoholic}</p>
-          </div>
-        </article>
-      ))}
+    <div>
+      <div className="vignette">
+        {drink.map((nameDrink) => (
+          <article className="articleVignette">
+            <Link to="/show-cocktail">
+              <img
+                className="imgCocktail"
+                src={nameDrink.strDrinkThumb}
+                alt="cocktail"
+              />
+            </Link>
+            <div className="blocText">
+              <button onClick={clickButton} type="button">
+                {button ? (
+                  <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
+                ) : (
+                  <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
+                )}
+              </button>
+              <h2>{nameDrink.strDrink}</h2>
+              {/* <p>{nameDrink.strInstructions}</p> */}
+              <p>cocktail recipe</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }

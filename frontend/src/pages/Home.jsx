@@ -24,7 +24,6 @@ function Home() {
 
   return (
     <div>
-      <header className="App-header" />
       <main>
         <ShowCocktail drinks={drinks} />
         <Card />
