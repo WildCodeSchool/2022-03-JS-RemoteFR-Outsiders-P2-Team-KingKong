@@ -1,7 +1,6 @@
 import React from "react";
-import ShowCocktail from "../components/ShowCocktail";
-import Footer from "../components/Footer";
-import Card from "../components/Card";
+import ShowCocktail from "@components/ShowCocktail";
+import Card from "@components/Card";
 
 function Home() {
   const drinks = {
@@ -30,7 +29,6 @@ function Home() {
         <ShowCocktail drinks={drinks} />
         <Card />
       </main>
-      <Footer />
     </div>
   );
 }
