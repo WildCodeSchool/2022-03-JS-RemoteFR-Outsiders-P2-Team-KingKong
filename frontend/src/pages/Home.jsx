@@ -26,7 +26,7 @@ function Home() {
     <div>
       <main>
         <ShowCocktail drinks={drinks} />
-        <Card />
+       
       </main>
     </div>
   );
