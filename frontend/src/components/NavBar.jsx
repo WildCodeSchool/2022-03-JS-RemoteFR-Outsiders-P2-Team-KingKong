@@ -17,7 +17,7 @@ function NavBar() {
             <Link to="/random">Random Cocktail</Link>
           </li>
           <li className="navigation-name">
-            <Link to="/popularcocktail">Popular Cocktail</Link>
+            <Link to="/popular-cocktail">Popular Cocktail</Link>
           </li>
         </ul>
         <SearchBar
