@@ -1,5 +1,4 @@
-{
-    "drinks": [
+[
         {
             "idDrink": "11000",
             "strDrink": "Mojito",
@@ -123,4 +122,3 @@
             "strCategory": "Cocoa"
         }
     ]
-}
