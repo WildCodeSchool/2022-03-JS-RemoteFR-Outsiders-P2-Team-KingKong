@@ -44,10 +44,10 @@
   color: #fff;
   animation: flicker 5s infinite alternate;
 }
-i.fa-solid:nth-child(3){
+i.fa-solid:nth-child(3) {
   color: white;
-font-size: 5rem;
-margin-top: 5rem;
+  font-size: 5rem;
+  margin-top: 5rem;
 }
 
 /* Flickering animation */

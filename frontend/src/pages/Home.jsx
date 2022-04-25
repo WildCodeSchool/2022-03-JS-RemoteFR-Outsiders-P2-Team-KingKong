@@ -1,6 +1,5 @@
 import React from "react";
 import ShowCocktail from "@components/ShowCocktail";
-import Card from "@components/Card";
 
 function Home() {
   const drinks = {
@@ -26,7 +25,6 @@ function Home() {
     <div>
       <main>
         <ShowCocktail drinks={drinks} />
-       
       </main>
     </div>
   );
