@@ -182,7 +182,7 @@ function Card() {
     <div>
       <div className="vignette">
         {drinks.map((nameDrink) => (
-          <SingleCard nameDrink={nameDrink} /> // key={idDrink} modifié impossible de fix
+          <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} /> // key={idDrink} modifié impossible de fix
         ))}
       </div>
     </div>
