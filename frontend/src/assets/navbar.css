@@ -1,5 +1,5 @@
 .navigation {
-  background: #ef8c16;
+  background: var(---background-second-color);
 }
 .navigation-bar {
   display: flex;

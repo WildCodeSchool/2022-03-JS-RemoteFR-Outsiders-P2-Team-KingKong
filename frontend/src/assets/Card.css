@@ -21,7 +21,7 @@
   justify-content: center;
   margin-bottom: 6rem;
   padding: 15px;
-  background-color: #ef8c16;
+  background-color: var(---background-second-color);
 }
 .articleVignette > img {
   margin-bottom: 1rem;
