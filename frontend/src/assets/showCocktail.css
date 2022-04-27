@@ -13,7 +13,7 @@ h1 {
 .ingredients {
   margin: 1.5rem 0 1.5rem 0;
   padding: 1rem 0 1rem 0;
-  background-color: var(---background-third-color);
+  background-color: var(---background-second-color-transparent);
   width: 35vh;
   border-radius: var(---border-radius);
 }
@@ -21,10 +21,10 @@ h1 {
   height: 0.1rem;
   width: 20%;
   margin: auto;
-  background-color: #ffaf00;
+  background-color: var(---background-third-color);
 }
 .recipe {
-  background-color: var(---background-third-color);
+  background-color: var(---background-second-color-transparent);
   border-radius: var(---border-radius);
   padding: 2rem;
   margin: 1rem;
