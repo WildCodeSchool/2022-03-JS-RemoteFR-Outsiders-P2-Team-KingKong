@@ -5,12 +5,10 @@
 }
 
 .footer {
-  display: inline;
   background-color: #ffaf00;
   width: 100%;
   font-family: "Overpass";
   bottom: 0;
-  position: absolute;
 }
 
 .copyright {

@@ -1,7 +1,5 @@
 import React from "react";
-import ShowCocktail from "../components/ShowCocktail";
-import Footer from "../components/Footer";
-import Card from "../components/Card";
+import ShowCocktail from "@components/ShowCocktail";
 
 function Home() {
   const drinks = {
@@ -25,12 +23,9 @@ function Home() {
 
   return (
     <div>
-      <header className="App-header" />
       <main>
         <ShowCocktail drinks={drinks} />
-        <Card />
       </main>
-      <Footer />
     </div>
   );
 }

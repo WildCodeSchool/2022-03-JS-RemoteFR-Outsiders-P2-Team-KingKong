@@ -17,7 +17,7 @@ function NavBar() {
             <Link to="/random">Random Cocktail</Link>
           </li>
           <li className="navigation-name">
-            <Link to="/popularcocktail">Popular Cocktail</Link>
+            <Link to="/popular-cocktail">Popular Cocktail</Link>
           </li>
         </ul>
         <SearchBar
@@ -26,9 +26,13 @@ function NavBar() {
         />
         {cocktails
           .filter((cocktail) => cocktail.includes(searchValue))
-          .map((cocktail) => (
-            <p>{cocktail}</p>
-          ))}
+          .map(
+            (
+              cocktail // (cocktail,id) modifié impossible de fix
+            ) => (
+              <p>{cocktail}</p> // <p>key={id}</p> modifié impossible de fix
+            )
+          )}
       </nav>
     </div>
   );

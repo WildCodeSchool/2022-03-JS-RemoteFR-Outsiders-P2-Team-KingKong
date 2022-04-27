@@ -1,30 +1,37 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Random from "@pages/Random";
+import { Route, Routes } from "react-router-dom";
 import PopularCocktail from "@pages/PopularCocktail";
-import Banner from "@components/Banner";
+import Random from "@pages/Random";
 import Home from "@pages/Home";
-import "@assets/navbar.css";
+import Banner from "@components/Banner";
+import Footer from "@components/Footer";
+import Card from "@components/Card";
 import NavBar from "@components/NavBar";
+import ShowCocktail from "@components/ShowCocktail";
 import getCocktailByName from "@services/getCocktail";
+import "@assets/navbar.css";
 
 function App() {
   React.useEffect(async () => {
-    console.log(await getCocktailByName('vodka', 4));
+    // INFO: Ici, nous récuperons les informations de la recette
+    // Via un appel à la fonction "getCocktailByName" de manière asynchrone.
+    // Ceci est un exemple de requête. Je le laisse pour les autres dev.
+    console.warn(await getCocktailByName('vodka', 4));
   }, []);
   return (
     <div>
       <Banner />
-      <Router>
-        <div>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/random" element={<Random />} />
-            <Route path="/popularcocktail" element={<PopularCocktail />} />
-          </Routes>
-        </div>
-      </Router>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/random" element={<Random />} />
+          <Route path="/popular-cocktail" element={<PopularCocktail />} />
+          <Route path="/show-cocktail" element={<ShowCocktail />} />
+        </Routes>
+      </div>
+      <Card />
+      <Footer />
     </div>
   );
 }

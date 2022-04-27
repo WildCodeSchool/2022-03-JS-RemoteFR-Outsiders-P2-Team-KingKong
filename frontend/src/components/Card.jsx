@@ -1,9 +1,10 @@
 import React from "react";
-import "../assets/Card.css";
+import "@assets/Card.css";
+import SingleCard from "./SingleCard";
 
 function Card() {
   // usestate drink de test avant l api
-  const drink = [
+  const drinks = [
     {
       idDrink: "11007",
       strDrink: "Margarita",
@@ -177,45 +178,13 @@ function Card() {
     },
   ];
 
-  //   function handleclick() {
-  //     const togg1 = document.getElementById("togg1");
-  //     const togg2 = document.getElementById("togg2");
-  //     if (togg1.style.display === "none") {
-  //       togg1.style.display = "block";
-  //       togg2.style.display = "none";
-  //     } else {
-  //       togg1.style.display = "none";
-  //       togg2.style.display = "block";
-  //     }
-
-  //
-  const [button, setButton] = React.useState(false);
-  function clickButton() {
-    setButton(!button);
-  }
   return (
-    <div className="vignette">
-      {drink.map((nameDrink) => (
-        <article className="articleVignette">
-          <img
-            className="imgCocktail"
-            src={nameDrink.strDrinkThumb}
-            alt="cocktail"
-          />
-          <div className="blocText">
-            <button onClick={clickButton} type="button">
-              {button ? (
-                <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
-              ) : (
-                <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
-              )}
-            </button>
-            <h2>{nameDrink.strDrink}</h2>
-            {/* <p>{nameDrink.strInstructions}</p> */}
-            <p>cocktail recipe</p>
-          </div>
-        </article>
-      ))}
+    <div>
+      <div className="vignette">
+        {drinks.map((nameDrink) => (
+          <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} /> // key={idDrink} modifié impossible de fix
+        ))}
+      </div>
     </div>
   );
 }
