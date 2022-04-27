@@ -179,7 +179,7 @@ function Card() {
   ];
 
   return (
-    <div>
+    <div id="section-card">
       <div className="vignette">
         {drinks.map((nameDrink) => (
           <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} /> // key={idDrink} modifié impossible de fix
