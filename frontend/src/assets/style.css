@@ -3,9 +3,9 @@
 :root {
   ---background-first-color: #06070e;
   ---background-second-color: #ffaf00;
-  ---background-third-color: #2b2c2fc1;
-  ---background-fourth-color: ;
-  ---background-fifth-color: ;
+  ---background-third-color: #ef8c16;
+  ---background-fourth-color: #2b2c2fc1;
+  ---background-fifth-color-transparent: #ef8d16da;
 
   ---font-color-light: #fbeeee;
   ---font-color-dark: #1c1c1c;
@@ -22,6 +22,7 @@
 
   ---border-radius: 0.5rem;
   ---box-shadow: -10px 9px 29px -9px rgba(74, 74, 74, 0.87);
+  ---marginDesktop: 0 12rem 0 12rem;
 }
 
 * {

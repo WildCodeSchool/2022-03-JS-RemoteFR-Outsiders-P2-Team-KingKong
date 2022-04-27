@@ -16,6 +16,7 @@ a {
   .navigation {
     display: flex;
     align-items: center;
+    padding: var(---marginDesktop);
   }
   .navigation-bar {
     width: 50%;

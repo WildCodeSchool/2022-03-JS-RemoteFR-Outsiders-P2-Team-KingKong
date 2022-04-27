@@ -10,8 +10,6 @@
   flex-direction: column;
   position: relative;
   align-items: center;
-  background-color: #777;
-  background-image: url("banner-wall.jpg");
   background-blend-mode: multiply;
   padding-top: 4rem;
   background-attachment: fixed;

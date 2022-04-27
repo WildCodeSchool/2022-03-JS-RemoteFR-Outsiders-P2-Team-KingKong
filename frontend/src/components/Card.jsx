@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "@assets/Card.css";
 
@@ -178,15 +178,15 @@ function Card() {
     },
   ];
 
-  const [button, setButton] = React.useState(false);
+  const [button, setButton] = useState(false);
   function clickButton() {
     setButton(!button);
   }
   return (
     <div>
       <div className="vignette">
-        {drinks.map((nameDrink, key) => (
-          <article className="articleVignette" key={key}>
+        {drinks.map((nameDrink) => (
+          <article className="articleVignette" key={nameDrink.idDrink}>
             <Link to="/show-cocktail">
               <img
                 className="imgCocktail"

@@ -26,8 +26,8 @@ function NavBar() {
         />
         {cocktails
           .filter((cocktail) => cocktail.includes(searchValue))
-          .map((cocktail, id) => (
-            <p key={id}>{cocktail}</p>
+          .map((cocktail) => (
+            <p>{cocktail}</p>
           ))}
       </nav>
     </div>
