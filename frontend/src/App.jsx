@@ -9,7 +9,9 @@ import NavBar from "@components/NavBar";
 import getCocktailByName from "@services/getCocktail";
 
 function App() {
-  getCocktailByName("mojito", 3, 1);
+  React.useEffect(async () => {
+    console.log(await getCocktailByName('vodka', 4));
+  }, []);
   return (
     <div>
       <Banner />

@@ -1,11 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-// 2 problemes : impossible de return et random fonctionne pas
-export default function getCocktailByName(name, number) {
+const getCocktailByName = async (name, number) => {
   const test = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
   const cocktailList = [];
   const cocktail = {};
-  axios
+  const data = await axios
     .get(test)
     .then((response) => response.data)
     .then((data) => {
@@ -18,31 +17,10 @@ export default function getCocktailByName(name, number) {
           (cocktail.quantity = getMeasuresToArray(data.drinks[i])),
           cocktailList.push(cocktail);
       }
-      console.log(cocktailList);
     });
-}
 
-function getCocktailByIngredient(ingredient, number) {
-  const test = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredient}`;
-  const cocktailList = [];
-  const cocktail = {};
-
-  axios
-    .get(test)
-    .then((response) => response.data)
-    .then((data) => {
-      for (let i = 0; i < number; i++) {
-        (cocktail.id = data.drinks[i].idDrink),
-          (cocktail.title = data.drinks[i].strDrink),
-          (cocktail.image = data.drinks[i].strDrinkThumb),
-          (cocktail.instructions = data.drinks[i].strInstructions),
-          (cocktail.ingredients = getIngredientsToArray(data.drinks[i])),
-          (cocktail.quantity = getMeasuresToArray(data.drinks[i])),
-          cocktailList.push(cocktail);
-      }
-      console.log(cocktailList);
-    });
-}
+  return cocktailList;
+};
 
 function getIngredientsToArray(list) {
   let ingredientsList = [
@@ -86,4 +64,4 @@ function getMeasuresToArray(list) {
   return measuresList;
 }
 
-export { getCocktailByName, getCocktailByIngredient };
+export { getCocktailByName };
