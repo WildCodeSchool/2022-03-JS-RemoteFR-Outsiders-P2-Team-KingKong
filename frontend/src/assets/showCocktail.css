@@ -1,27 +1,44 @@
-.body {
-  color: var(---font-color-dark);
-}
 .cocktailContainer {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 h1 {
-  margin: 1rem;
+  margin: 2rem 0 0 0;
+  color: var(---font-color-light);
 }
+
+.fav {
+  color: var(---font-color-light);
+  text-align: right;
+  margin-bottom: 1rem;
+}
+button {
+  font-size: 2rem;
+  background-color: transparent;
+  border: 0;
+}
+.fa-regular,
+.fa-solid {
+  color: red;
+}
+
 .ingredients {
-  margin: 1.5rem 0 1.5rem 0;
-  padding: 1rem 0 1rem 0;
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 2rem 0 2rem 0;
   background-color: var(---background-second-color-transparent);
-  width: 35vh;
+  width: 60%;
   border-radius: var(---border-radius);
+  align-self: center;
+  align-content: center;
+  text-align: center;
 }
 .row {
   height: 0.1rem;
   width: 20%;
   margin: auto;
-  background-color: var(---background-third-color);
+  margin-bottom: 0.7rem;
+  background-color: var(---background-second-color);
 }
 .recipe {
   background-color: var(---background-second-color-transparent);
@@ -33,18 +50,15 @@ h1 {
 
 ul {
   margin: 0;
-  list-style-type: square;
-  text-align: left;
+  list-style-type: none;
+  text-align: center;
   line-height: var(---line-height--ul);
 }
 
 h2 {
   margin: 0 0 0.8rem 0;
 }
-p,
-ul {
-  font-size: var(---font-size--p);
-}
+
 img {
   width: 100%;
 }
@@ -52,50 +66,49 @@ p {
   line-height: var(---line-height--p);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 378px) {
   .cocktailContainer {
-    margin: var(---marginDesktop);
-
+    margin: var(---marginTablet);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-
+  .fav {
+    margin: 0;
+    align-self: flex-end;
+  }
   .drinkName {
-    width: 96%;
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
   }
   .ingredients {
-    margin: 1.5rem 0 1.5rem 0;
-    padding: 2rem 0 2rem 0;
-    width: 50%;
+    margin: 0;
+    min-width: 10%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
+  .cocktailContainer img {
+    border-radius: var(---border-radius);
+    max-width: 30%;
+    height: auto;
+    margin-top: 2vh;
+    align-self: center;
+  }
+  .recipe {
+    margin: 0;
+    margin-top: 3rem;
+  }
+
   .row {
     display: none;
   }
-
-  ul {
-    margin: 0;
-    list-style-type: square;
-    line-height: 3rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin: 0 0 0.8rem 0;
-  }
-
-  .cocktailContainer > img {
-    min-width: 40%;
-    max-width: 40%;
-
-    height: auto;
-  }
 }
+
+@media screen and (min-width: 750px) {
+  .cocktailContainer {
+    margin: var(---marginDesktop);
+  }
+} ;
