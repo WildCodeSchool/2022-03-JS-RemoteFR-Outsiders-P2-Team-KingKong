@@ -7,7 +7,7 @@ function PopularCocktail() {
   return (
     <>
       <h1 className="popularcocktail-title">OUR TOP 10</h1>
-    <PopularCocktailList drinks={drinks}/>
+      <PopularCocktailList drinks={drinks} />
     </>
   );
 }

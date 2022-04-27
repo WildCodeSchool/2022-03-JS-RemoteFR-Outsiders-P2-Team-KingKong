@@ -8,8 +8,8 @@ import Footer from "@components/Footer";
 import Card from "@components/Card";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
-import getCocktailByName from "@services/getCocktail";
 import "@assets/navbar.css";
+import "@assets/app.css";
 
 function App() {
   React.useEffect(async () => {
@@ -21,15 +21,13 @@ function App() {
   return (
     <div>
       <Banner />
-      <div>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/random" element={<Random />} />
-          <Route path="/popular-cocktail" element={<PopularCocktail />} />
-          <Route path="/show-cocktail" element={<ShowCocktail />} />
-        </Routes>
-      </div>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/random" element={<Random />} />
+        <Route path="/popular-cocktail" element={<PopularCocktail />} />
+        <Route path="/show-cocktail" element={<ShowCocktail />} />
+      </Routes>
       <Card />
       <Footer />
     </div>

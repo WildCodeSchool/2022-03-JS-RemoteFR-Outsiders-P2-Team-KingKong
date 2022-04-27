@@ -1,6 +1,7 @@
+.body {
+  color: var(---font-color-dark);
+}
 .cocktailContainer {
-  background-color: var(---background-first-color);
-
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -23,6 +24,9 @@ h1 {
   background-color: #ffaf00;
 }
 .recipe {
+  background-color: var(---background-third-color);
+  border-radius: var(---border-radius);
+  padding: 2rem;
   margin: 1rem;
   text-align: left;
 }
@@ -48,9 +52,10 @@ p {
   line-height: var(---line-height--p);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 768px) {
   .cocktailContainer {
-    width: 70%;
+    margin: var(---marginDesktop);
+
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -65,7 +70,6 @@ p {
   .ingredients {
     margin: 1.5rem 0 1.5rem 0;
     padding: 2rem 0 2rem 0;
-    background-color: var(---background-third-color);
     width: 50%;
     height: auto;
     display: flex;

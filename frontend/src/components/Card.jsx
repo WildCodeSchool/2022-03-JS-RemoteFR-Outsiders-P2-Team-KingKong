@@ -1,6 +1,6 @@
 import React from "react";
-import "@assets/Card.css";
 import SingleCard from "./SingleCard";
+import "@assets/Card.css";
 
 function Card() {
   // usestate drink de test avant l api
