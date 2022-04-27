@@ -4,6 +4,7 @@
   width: 100%;
   transition: 0.7s;
   z-index: 99;
+  border-bottom: thin solid black;
 }
 
 .navigation {
