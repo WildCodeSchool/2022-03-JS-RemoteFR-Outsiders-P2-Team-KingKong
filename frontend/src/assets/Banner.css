@@ -40,11 +40,16 @@
   animation: flicker 5s infinite alternate;
 }
 i.fa-solid:nth-child(3) {
-  color: white;
-  font-size: 5rem;
-  margin-top: 5rem;
+margin-top: 10vh;
 }
-
+.arrow-link{
+  color: white;
+  font-size: 3rem;
+  animation: flicker 5s infinite;
+  margin-top: 10vh;
+  transition: 0.7s;
+  cursor: pointer;
+}
 /* Flickering animation */
 @keyframes flicker {
   0%,
