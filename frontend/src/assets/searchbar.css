@@ -2,20 +2,25 @@
   width: 20%;
   background-color: var(---font-color-light);
 }
+
 .image-logo {
   width: 20px;
 }
+
 .input {
   width: 80vw;
   padding: 2%;
   color: var(---background-first-color);
   font-weight: 500;
 }
+
 .searchbar {
   width: 80vw;
   display: flex;
   justify-content: center;
+  padding: 1%;
 }
+
 .full-searchbar {
   display: flex;
   justify-content: center;
@@ -27,6 +32,7 @@
     display: flex;
     justify-content: flex-end;
   }
+
   .searchbar {
     width: 40vw;
     margin-right: 3%;

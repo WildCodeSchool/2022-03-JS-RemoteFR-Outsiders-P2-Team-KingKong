@@ -5,11 +5,11 @@ import "../assets/navbar.css";
 
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
-  const [cocktails] = useState(["Margarita", "Mojito"]);
+  const [cocktails] = useState([""]);
 
   const [show, setShow] = useState(true);
   const controlNavbar = () => {
-    if (window.scrollY < 150) {
+    if (window.scrollY < 20 ) {
       setShow(false)
     } else {
       setShow(true)
@@ -31,10 +31,10 @@ function NavBar() {
             <Link to="/">Home</Link>
           </li>
           <li className="navigation-name">
-            <Link to="/random">Random Cocktail</Link>
+            <Link to="/random">Random</Link>
           </li>
           <li className="navigation-name">
-            <Link to="/popular-cocktail">Popular Cocktail</Link>
+            <Link to="/popular-cocktail">Popular</Link>
           </li>
         </ul>
         <SearchBar
