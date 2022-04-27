@@ -1,14 +1,13 @@
 .full-navigation {
   position: fixed;
-  top: 100vh;
+  top: 0;
   width: 100%;
-  transition: 0.7s;
   z-index: 99;
-  border-bottom: thin solid black;
+  border-bottom: thin solid var(---background-first-color);
 }
 
 .navigation {
-  background: #ef8c16;
+  background: var(---background-second-color);
 }
 
 .navigation-bar {
@@ -21,13 +20,19 @@
 a {
   outline: none;
   text-decoration: none;
-  color: black;
+  color: var(---background-first-color);
 }
 
 @media screen and (min-width: 768px) {
+  .full-navigation{
+    background-color: var(---background-second-color);
+    display: flex;
+    justify-content: center;
+  }
   .navigation {
     display: flex;
     align-items: center;
+    width: 90%;
   }
 
   .navigation-bar {
@@ -40,4 +45,10 @@ a {
     margin-left: 10%;
     line-height: 1.2;
   }
+}
+@media screen and (min-width: 1024px) {
+  .navigation {
+    width: 80%;
+  }
+
 }

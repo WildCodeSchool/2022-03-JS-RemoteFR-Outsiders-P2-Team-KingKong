@@ -1,23 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "../assets/navbar.css";
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.documentElement.scrollTop > 200) {
-    document.querySelector(".full-navigation").style.top = "0";
-  } else {
-    document.querySelector(".full-navigation").style.top = "-50vh";
-  }
-}
-
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails] = useState(["Margarita", "Mojito"]);
+
+  const [show, setShow] = useState(true);
+  const controlNavbar = () => {
+    if (window.scrollY < 150) {
+      setShow(false)
+    } else {
+      setShow(true)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll',
+      controlNavbar)
+    return () => {
+      window.removeEventListener('scroll', controlNavbar)
+    }
+  }, []);
+
   return (
-    <div className="full-navigation">
+    <div className={`${show && 'full-navigation'}`}>
       <nav className="navigation">
         <ul className="navigation-bar">
           <li className="navigation-name">
@@ -40,7 +47,7 @@ function NavBar() {
             (
               cocktail // (cocktail,id) modifié impossible de fix
             ) => (
-              <p>{cocktail}</p> // <p>key={id}</p> modifié impossible de fix
+              <p >{cocktail}</p> // <p>key={id}</p> modifié impossible de fix
             )
           )}
       </nav>
