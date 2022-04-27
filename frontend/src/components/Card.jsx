@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import SingleCard from "./SingleCard";
 import "@assets/Card.css";
 
 function Card() {
@@ -178,34 +178,11 @@ function Card() {
     },
   ];
 
-  const [button, setButton] = useState(false);
-  function clickButton() {
-    setButton(!button);
-  }
   return (
     <div>
       <div className="vignette">
         {drinks.map((nameDrink) => (
-          <article className="articleVignette" key={nameDrink.idDrink}>
-            <Link to="/show-cocktail">
-              <img
-                className="imgCocktail"
-                src={nameDrink.strDrinkThumb}
-                alt="cocktail"
-              />
-            </Link>
-            <div className="blocText">
-              <button onClick={clickButton} type="button">
-                {button ? (
-                  <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
-                ) : (
-                  <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
-                )}
-              </button>
-              <h2>{nameDrink.strDrink}</h2>
-              <p>cocktail recipe</p>
-            </div>
-          </article>
+          <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} /> // key={idDrink} modifié impossible de fix
         ))}
       </div>
     </div>
