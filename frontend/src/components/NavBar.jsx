@@ -47,7 +47,7 @@ function NavBar() {
             (
               cocktail // (cocktail,id) modifié impossible de fix
             ) => (
-              <p >{cocktail}</p> // <p>key={id}</p> modifié impossible de fix
+              <p>{cocktail}</p> // <p>key={id}</p> modifié impossible de fix
             )
           )}
       </nav>
