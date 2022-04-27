@@ -8,11 +8,16 @@ import Footer from "@components/Footer";
 import Card from "@components/Card";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
-// import getCocktailByName from "@services/getCocktail";
+import getCocktailByName from "@services/getCocktail";
 import "@assets/navbar.css";
 
 function App() {
-  // getCocktailByName("mojito", 3, 1);
+  React.useEffect(async () => {
+    // INFO: Ici, nous récuperons les informations de la recette
+    // Via un appel à la fonction "getCocktailByName" de manière asynchrone.
+    // Ceci est un exemple de requête. Je le laisse pour les autres dev.
+    console.warn(await getCocktailByName('vodka', 4));
+  }, []);
   return (
     <div>
       <Banner />
