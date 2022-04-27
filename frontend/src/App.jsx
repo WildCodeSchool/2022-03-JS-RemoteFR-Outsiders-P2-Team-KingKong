@@ -8,7 +8,7 @@ import Footer from "@components/Footer";
 import Card from "@components/Card";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
-import getCocktailByName from "@services/getCocktail";
+// import getCocktailByName from "@services/getCocktail";
 import "@assets/navbar.css";
 
 function App() {
@@ -16,15 +16,15 @@ function App() {
   return (
     <div>
       <Banner />
-        <div>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/random" element={<Random />} />
-            <Route path="/popular-cocktail" element={<PopularCocktail />} />
-            <Route path="/show-cocktail" element={<ShowCocktail />} />
-          </Routes>
-        </div>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/random" element={<Random />} />
+          <Route path="/popular-cocktail" element={<PopularCocktail />} />
+          <Route path="/show-cocktail" element={<ShowCocktail />} />
+        </Routes>
+      </div>
       <Card />
       <Footer />
     </div>
