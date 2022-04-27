@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "../assets/navbar.css";
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.documentElement.scrollTop > 200) {
+    document.querySelector(".full-navigation").style.top = "0";
+  } else {
+    document.querySelector(".full-navigation").style.top = "-50vh";
+  }
+}
+
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails] = useState(["Margarita", "Mojito"]);
