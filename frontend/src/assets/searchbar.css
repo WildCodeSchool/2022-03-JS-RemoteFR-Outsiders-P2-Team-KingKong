@@ -1,6 +1,7 @@
 .btn {
   width: 20%;
   background-color: var(---font-color-light);
+  border: thin solid var(---background-first-color);
 }
 
 .image-logo {

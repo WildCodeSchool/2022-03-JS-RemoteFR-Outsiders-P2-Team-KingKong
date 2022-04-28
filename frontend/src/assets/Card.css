@@ -1,12 +1,14 @@
 .imgCocktail {
   width: 100%;
 }
+
 .vignette {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
 }
+
 .articleVignette {
   display: flex;
   width: clamp(15rem, 20rem, 23rem);
@@ -14,44 +16,49 @@
   justify-content: center;
   margin-bottom: 2rem;
   padding: 15px;
-  background-color: var(---background-second-color);
+  background-color: var(---background-second-color-transparent);
   border-radius: var(---border-radius);
 }
 
-article.articleVignette > div > button > i {
+.fa-heart {
   color: red;
   font-size: 2rem;
 }
 
-article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
+article.articleVignette:nth-child(n)>div:nth-child(n)>button:nth-child(n) {
   background-color: transparent;
   border: 0;
   position: absolute;
   bottom: 0;
   right: 0;
 }
+
 .blocText {
   width: 100%;
   position: relative;
   padding-bottom: 50px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .articleVignette {
     display: flex;
-    min-width: 15rem;
+    width: clamp(5rem, 12rem, 12rem);
     flex-direction: column;
+    justify-content: center;
     margin: 2rem;
   }
+
   .vignette {
     margin: var(---marginDesktop);
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    width: 70%;
+    flex-wrap: wrap;
     margin-bottom: 3rem;
+    justify-content: space-between;
   }
-  .articleVignette > img {
+
+  .articleVignette>img {
     margin-bottom: 0;
     margin-right: 1rem;
   }

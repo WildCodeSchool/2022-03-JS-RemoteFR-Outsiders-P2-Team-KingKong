@@ -32,12 +32,11 @@ a {
   .navigation {
     display: flex;
     align-items: center;
-    width: 80%;
     padding: var(---marginDesktop);
   }
 
   .navigation-bar {
-    width: 50%;
+    width: 34vw;
     display: flex;
     justify-content: space-around;
   }
