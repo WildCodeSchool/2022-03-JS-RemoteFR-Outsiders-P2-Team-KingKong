@@ -1,25 +1,31 @@
 .btn {
   width: 20%;
-  background-color: white;
+  background-color: var(---font-color-light);
+  border: thin solid var(---background-first-color);
 }
+
 .image-logo {
   width: 20px;
 }
+
 .input {
   width: 80vw;
   padding: 2%;
-  color: black;
+  color: var(---background-first-color);
   font-weight: 500;
 }
+
 .searchbar {
   width: 80vw;
   display: flex;
   justify-content: center;
+  padding: 1%;
 }
+
 .full-searchbar {
   display: flex;
   justify-content: center;
-  background: #ef8c16;
+  background: var(---background-second-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -27,6 +33,7 @@
     display: flex;
     justify-content: flex-end;
   }
+
   .searchbar {
     width: 40vw;
     margin-right: 3%;

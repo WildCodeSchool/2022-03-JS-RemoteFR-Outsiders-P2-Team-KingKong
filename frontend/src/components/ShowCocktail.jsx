@@ -3,7 +3,12 @@ import "../assets/showCocktail.css";
 import "../assets/style.css";
 
 function ShowCocktail() {
+  const [button, setButton] = React.useState(false);
+  function clickButton() {
+    setButton(!button);
+  }
   const drinks = {
+    idDrink: "11007",
     strDrink: "Margarita",
     strDrinkThumb:
       "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
@@ -26,9 +31,15 @@ function ShowCocktail() {
     <div className="cocktailContainer">
       <div className="drinkName">
         <h1>{drinks.strDrink}</h1>
-        <p>
+        <p className="fav">
           Ajouter dans mes favoris{" "}
-          <i className="em em-heart" aria-label="HEAVY BLACK HEART" />{" "}
+          <button onClick={clickButton} type="button">
+            {button ? (
+              <i id={drinks.idDrink} className="fa-solid fa-heart" />
+            ) : (
+              <i id={drinks.idDrink} className="fa-regular fa-heart" />
+            )}
+          </button>
         </p>
       </div>
 

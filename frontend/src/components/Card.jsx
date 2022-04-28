@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import SingleCard from "./SingleCard";
 import "@assets/Card.css";
 import "@services/data.json";
+import "@assets/style.css";
+
 
 function Card() {
   const [isLoaded, setIsLoaded] = useState(false);
