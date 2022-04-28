@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../assets/style.css";
+import "../assets/Card.css";
 
 function PopularCocktailCard({ strDrinkThumb, idDrink, strDrink }) {
   const [button, setButton] = useState(false);

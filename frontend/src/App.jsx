@@ -16,7 +16,7 @@ function App() {
     // INFO: Ici, nous récuperons les informations de la recette
     // Via un appel à la fonction "getCocktailByName" de manière asynchrone.
     // Ceci est un exemple de requête. Je le laisse pour les autres dev.
-    console.warn(await getCocktailByName('vodka', 4));
+    // console.warn(await getCocktailByName('vodka', 4));
   }, []);
   return (
     <div>
