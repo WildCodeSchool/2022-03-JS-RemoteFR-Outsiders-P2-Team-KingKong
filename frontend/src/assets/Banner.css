@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
-  --neon-bg-color-2: #12c4e8; /* bleu 006eff */
-  --neon-bg-color-1: #ff51f3; /* rose */
-  --neon-bg-color: #74ea62; /* vert */
+  --neon-bg-color-2: #12c4e8;
+  /* bleu 006eff */
+  --neon-bg-color-1: #ff51f3;
+  /* rose */
+  --neon-bg-color: #74ea62;
+  /* vert */
 }
 
 .banner {
@@ -18,19 +21,19 @@
   text-align: center;
 }
 
-.banner > img {
+.banner>img {
   width: 300px;
   height: auto;
   margin: 10px auto 0px auto;
 }
 
-.banner > h1 {
+.banner>h1 {
   color: #fff;
   font-size: 3rem;
   margin-top: -100px;
 }
 
-.banner > p.brandText {
+.banner>p.brandText {
   margin-top: 50px;
   font-size: 1.5rem !important;
 }
@@ -44,10 +47,12 @@
   color: #fff;
   animation: flicker 5s infinite alternate;
 }
-i.fa-solid:nth-child(3) {
-margin-top: 10vh;
+
+.fa-chevron-down {
+  margin-top: 40vh;
 }
-.arrow-link{
+
+.arrow-link {
   color: white;
   font-size: 3rem;
   animation: flicker 5s infinite;
@@ -55,8 +60,10 @@ margin-top: 10vh;
   transition: 0.7s;
   cursor: pointer;
 }
+
 /* Flickering animation */
 @keyframes flicker {
+
   0%,
   18%,
   22%,
@@ -76,5 +83,5 @@ margin-top: 10vh;
     text-shadow: none;
   }
 }
-@media screen and (min-width: 640px) {
-}
+
+@media screen and (min-width: 640px) {}

@@ -18,8 +18,7 @@ button {
   background-color: transparent;
   border: 0;
 }
-.fa-regular,
-.fa-solid {
+.fa-regular{
   color: red;
 }
 
