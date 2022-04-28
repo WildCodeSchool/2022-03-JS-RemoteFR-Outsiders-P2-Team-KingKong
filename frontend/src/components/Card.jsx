@@ -1,6 +1,7 @@
 import React from "react";
-import "@assets/Card.css";
 import SingleCard from "./SingleCard";
+import "../assets/Card.css";
+import "../assets/style.css";
 
 function Card() {
   // usestate drink de test avant l api
@@ -179,7 +180,7 @@ function Card() {
   ];
 
   return (
-    <div>
+    <div id="section-card">
       <div className="vignette">
         {drinks.map((nameDrink) => (
           <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} /> // key={idDrink} modifié impossible de fix

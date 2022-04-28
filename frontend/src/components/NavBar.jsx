@@ -43,13 +43,9 @@ function NavBar() {
         />
         {cocktails
           .filter((cocktail) => cocktail.includes(searchValue))
-          .map(
-            (
-              cocktail // (cocktail,id) modifié impossible de fix
-            ) => (
-              <p>{cocktail}</p> // <p>key={id}</p> modifié impossible de fix
-            )
-          )}
+          .map((cocktail) => (
+            <p>{cocktail}</p>
+          ))}
       </nav>
     </div>
   );

@@ -1,37 +1,23 @@
-* {
-  margin: 0px;
-}
-
 .imgCocktail {
   width: 100%;
 }
 .vignette {
   display: flex;
   flex-direction: column;
-  position: relative;
   align-items: center;
-  background-color: #777;
-  background-image: url("banner-wall.jpg");
-  background-blend-mode: multiply;
-  padding-top: 4rem;
-  background-attachment: fixed;
+  padding-top: 2rem;
 }
 .articleVignette {
-  width: 80%;
   display: flex;
+  width: clamp(15rem, 20rem, 23rem);
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   padding: 15px;
-  background-color: #ef8c16;
+  background-color: var(---background-second-color);
+  border-radius: var(---border-radius);
 }
-.articleVignette > img {
-  margin-bottom: 1rem;
-}
-.articleVignette > div > h3 {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
+
 article.articleVignette > div > button > i {
   color: red;
   font-size: 2rem;
@@ -53,15 +39,17 @@ article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
 @media screen and (min-width: 600px) {
   .articleVignette {
     display: flex;
+    min-width: 15rem;
     flex-direction: column;
-    width: 250px;
     margin: 2rem;
   }
   .vignette {
+    margin: var(---marginDesktop);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 3rem;
   }
   .articleVignette > img {
     margin-bottom: 0;

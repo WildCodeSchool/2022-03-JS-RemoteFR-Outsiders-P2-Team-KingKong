@@ -24,9 +24,9 @@ function SingleCard({ nameDrink }) {
       <div className="blocText">
         <button onClick={clickButton} type="button">
           {button ? (
-            <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
-          ) : (
             <i id={nameDrink.idDrink} className="fa-solid fa-heart" />
+          ) : (
+            <i id={nameDrink.idDrink} className="fa-regular fa-heart" />
           )}
         </button>
         <h2>{nameDrink.strDrink}</h2>
