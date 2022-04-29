@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "../assets/navbar.css";
+import { getCocktailByName } from "@services/getCocktail";
+import SingleCard from "./SingleCard";
 
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
-  const [cocktails] = useState([""]);
-
+  const [cocktails] = useState([]);
   const [show, setShow] = useState(true);
   const controlNavbar = () => {
-    if (window.scrollY < 20 ) {
+    if (window.scrollY < 20) {
       setShow(false)
     } else {
       setShow(true)
@@ -22,6 +23,10 @@ function NavBar() {
       window.removeEventListener('scroll', controlNavbar)
     }
   }, []);
+
+  useEffect(async () => {
+    console.warn(await getCocktailByName(searchValue, 1))
+  }, [searchValue])
 
   return (
     <div className={`${show && 'full-navigation'}`}>
@@ -43,8 +48,8 @@ function NavBar() {
         />
         {cocktails
           .filter((cocktail) => cocktail.includes(searchValue))
-          .map((cocktail) => (
-            <p>{cocktail}</p>
+          .map((cocktail, id) => (
+            <SingleCard key={id} value={cocktail} />
           ))}
       </nav>
     </div>
