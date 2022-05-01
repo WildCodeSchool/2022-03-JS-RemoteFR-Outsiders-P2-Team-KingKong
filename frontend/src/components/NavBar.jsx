@@ -7,19 +7,19 @@ function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails] = useState([""]);
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const controlNavbar = () => {
-    if (window.scrollY < 20 ) {
-      setShow(false)
-    } else {
+    if (scrollY >= 890) {
       setShow(true)
+    } else {
+      setShow(false)
     }
   }
   useEffect(() => {
-    window.addEventListener('scroll',
+    addEventListener('scroll',
       controlNavbar)
     return () => {
-      window.removeEventListener('scroll', controlNavbar)
+      removeEventListener('scroll', controlNavbar)
     }
   }, []);
 

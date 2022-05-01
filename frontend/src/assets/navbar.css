@@ -5,7 +5,6 @@
   z-index: 99;
   border-bottom: thin solid var(---background-first-color);
 }
-
 .navigation {
   background: var(---background-second-color);
 }
