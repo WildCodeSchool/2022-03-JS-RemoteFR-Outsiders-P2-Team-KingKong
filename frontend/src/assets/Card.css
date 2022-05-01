@@ -21,8 +21,9 @@
 }
 
 .fa-heart {
-  color: red;
+  color: rgb(143, 10, 10);
   font-size: 2rem;
+  cursor: pointer;
 }
 
 article.articleVignette:nth-child(n)>div:nth-child(n)>button:nth-child(n) {

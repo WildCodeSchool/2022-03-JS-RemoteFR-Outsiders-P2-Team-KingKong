@@ -19,7 +19,8 @@ button {
   border: 0;
 }
 .fa-regular{
-  color: red;
+  color: var(---font-color-light);
+  cursor: pointer;
 }
 
 .ingredients {

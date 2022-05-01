@@ -8,6 +8,7 @@ import Footer from "@components/Footer";
 import Card from "@components/Card";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
+import GoUpArrow from "@components/GoUpArrow";
 import "@assets/navbar.css";
 import "@assets/app.css";
 
@@ -30,7 +31,9 @@ function App() {
         <Route path="/popular-cocktail" element={<PopularCocktail />} />
         <Route path="/show-cocktail" element={<ShowCocktail />} />
       </Routes>
+      <GoUpArrow />
       <Card />
+      
       <Footer />
     </div>
   );
