@@ -3,7 +3,6 @@ import SingleCard from "./SingleCard";
 import "@assets/Card.css";
 import "@assets/style.css";
 
-
 function Card() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
@@ -29,9 +28,16 @@ function Card() {
   return (
     <div id="section-card">
       <div className="vignette">
-        {drinks.map((nameDrink) => (
-          <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} />
-        ))}
+        {drinks.map((drink) => {
+          const { idDrink, strDrinkThumb, strDrink } = drink;
+          return (
+            <SingleCard
+              idDrink={idDrink}
+              strDrink={strDrink}
+              strDrinkThumb={strDrinkThumb}
+            />
+          );
+        })}
       </div>
     </div>
   );
