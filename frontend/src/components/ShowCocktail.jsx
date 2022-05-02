@@ -38,12 +38,20 @@ function ShowCocktail() {
 
       <div className="ingredients">
         <h2>Ingredients</h2>
-        <ul>
-          {cocktail.ingredients &&
-            cocktail.ingredients.map((ingredient) => (
-              <li key={cocktail.id}>{ingredient}</li>
-            ))}
-        </ul>
+        <div className="list-ingredients-quantity">
+          <ul>
+            {cocktail.ingredients &&
+              cocktail.ingredients.map((ingredient) => (
+                <li key={cocktail.id}>{ingredient}</li>
+              ))}
+          </ul>
+          <ul>
+            {cocktail.quantity &&
+              cocktail.quantity.map((measure) => (
+                <li key={cocktail.id}>{measure}</li>
+              ))}
+          </ul>
+        </div>
       </div>
       <div className="row" />
       <div className="recipe">

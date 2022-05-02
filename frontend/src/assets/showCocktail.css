@@ -30,8 +30,12 @@ button {
   width: 60%;
   border-radius: var(---border-radius);
   align-self: center;
-  align-content: center;
   text-align: center;
+}
+
+.list-ingredients-quantity {
+  display: flex;
+  justify-content: space-around;
 }
 .row {
   height: 0.1rem;
@@ -51,7 +55,7 @@ button {
 ul {
   margin: 0;
   list-style-type: none;
-  text-align: center;
+  text-align: left;
   line-height: var(---line-height--ul);
 }
 
