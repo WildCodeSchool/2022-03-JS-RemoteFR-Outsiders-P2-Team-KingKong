@@ -33,7 +33,7 @@ function App() {
       </Routes>
       <GoUpArrow />
       <Card />
-      
+
       <Footer />
     </div>
   );

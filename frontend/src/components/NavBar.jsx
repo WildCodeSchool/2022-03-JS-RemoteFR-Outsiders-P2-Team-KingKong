@@ -9,22 +9,21 @@ function NavBar() {
 
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
-    if (scrollY >= 890) {
-      setShow(true)
+    if (window.scrollY >= 890) {
+      setShow(true);
     } else {
-      setShow(false)
+      setShow(false);
     }
-  }
+  };
   useEffect(() => {
-    addEventListener('scroll',
-      controlNavbar)
+    window.addEventListener("scroll", controlNavbar);
     return () => {
-      removeEventListener('scroll', controlNavbar)
-    }
+      window.removeEventListener("scroll", controlNavbar);
+    };
   }, []);
 
   return (
-    <div className={`${show && 'full-navigation'}`}>
+    <div className={`${show && "full-navigation"}`}>
       <nav className="navigation">
         <ul className="navigation-bar">
           <li className="navigation-name">

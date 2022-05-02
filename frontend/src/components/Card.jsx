@@ -3,7 +3,6 @@ import SingleCard from "./SingleCard";
 import "@assets/Card.css";
 import "@assets/style.css";
 
-
 function Card() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);

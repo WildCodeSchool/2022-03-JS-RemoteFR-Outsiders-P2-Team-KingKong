@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const getCocktailByName = async (name, number) => {
   const test = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
