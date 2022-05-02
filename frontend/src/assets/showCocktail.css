@@ -18,7 +18,7 @@ button {
   background-color: transparent;
   border: 0;
 }
-.fa-regular{
+.fa-regular {
   color: var(---font-color-light);
   cursor: pointer;
 }
