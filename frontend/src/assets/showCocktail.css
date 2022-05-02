@@ -104,6 +104,7 @@ p {
   .recipe {
     margin: 0;
     margin-top: 3rem;
+    width: 100%;
   }
 
   .row {
