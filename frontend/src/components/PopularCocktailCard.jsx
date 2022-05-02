@@ -9,7 +9,7 @@ function PopularCocktailCard({ strDrinkThumb, idDrink, strDrink }) {
     setButton(!button);
   }
   return (
-    <Link to={`/show-cocktail/${strDrink}`}>
+    <Link to={`/show-cocktail/${idDrink}`}>
       <article className="articleVignette">
         <img className="imgCocktail" src={strDrinkThumb} alt="cocktail" />
         <div className="blocText">

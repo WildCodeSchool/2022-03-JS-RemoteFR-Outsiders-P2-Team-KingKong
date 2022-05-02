@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/random" element={<Random />} />
         <Route path="/popular-cocktail" element={<PopularCocktail />} />
-        <Route path="/show-cocktail/:strDrink" element={<ShowCocktail />} />
+        <Route path="/show-cocktail/:idDrink" element={<ShowCocktail />} />
       </Routes>
       <GoUpArrow />
       <Card />
