@@ -28,9 +28,16 @@ function Card() {
   return (
     <div id="section-card">
       <div className="vignette">
-        {drinks.map((nameDrink) => (
-          <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} />
-        ))}
+        {drinks.map((drink) => {
+          const { idDrink, strDrinkThumb, strDrink } = drink;
+          return (
+            <SingleCard
+              idDrink={idDrink}
+              strDrink={strDrink}
+              strDrinkThumb={strDrinkThumb}
+            />
+          );
+        })}
       </div>
     </div>
   );
