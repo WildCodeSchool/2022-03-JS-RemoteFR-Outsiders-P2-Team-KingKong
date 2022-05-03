@@ -11,7 +11,7 @@ function ShowCocktail() {
   // Appel API
   useEffect(() => {
     getCocktailById(params.idDrink).then((data) => setCocktail(data));
-  }, [params.idDrink]);
+  }, []);
 
   const [button, setButton] = useState(false);
   function clickButton() {
@@ -24,7 +24,7 @@ function ShowCocktail() {
         <h1>{cocktail.title}</h1>
         <p className="fav">
           Ajouter dans mes favoris{" "}
-          <button onClick={clickButton} type="button">
+          <button onClick={clickButton} type="button" className="heart">
             {button ? (
               <i id={cocktail.id} className="fa-solid fa-heart" />
             ) : (
