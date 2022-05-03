@@ -7,29 +7,30 @@ import SingleCard from "./SingleCard";
 
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
-  const [cocktails] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
   const [show, setShow] = useState(true);
   const controlNavbar = () => {
     if (window.scrollY < 20) {
-      setShow(false)
+      setShow(false);
     } else {
-      setShow(true)
+      setShow(true);
     }
-  }
+  };
   useEffect(() => {
-    window.addEventListener('scroll',
-      controlNavbar)
+    window.addEventListener("scroll", controlNavbar);
     return () => {
-      window.removeEventListener('scroll', controlNavbar)
-    }
+      window.removeEventListener("scroll", controlNavbar);
+    };
   }, []);
 
   useEffect(async () => {
-    console.warn(await getCocktailByName(searchValue, 1))
-  }, [searchValue])
+    const cocktail = await getCocktailByName(searchValue, 10);
+    setCocktails(cocktail);
+  }, [searchValue]);
+  console.warn(cocktails);
 
   return (
-    <div className={`${show && 'full-navigation'}`}>
+    <div className={`${show && "full-navigation"}`}>
       <nav className="navigation">
         <ul className="navigation-bar">
           <li className="navigation-name">
@@ -46,10 +47,13 @@ function NavBar() {
           searchValue={searchValue}
           handleSearchValue={setSearchValue}
         />
-        {cocktails
-          .filter((cocktail) => cocktail.includes(searchValue))
-          .map((cocktail, id) => (
-            <SingleCard key={id} value={cocktail} />
+        {cocktails &&
+          cocktails.map((cocktail) => (
+            <SingleCard
+              image={cocktail.image}
+              id={cocktail.id}
+              title={cocktail.title}
+            />
           ))}
       </nav>
     </div>

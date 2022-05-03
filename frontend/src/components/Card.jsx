@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { getCocktailByName } from "@services/getCocktail";
 import SingleCard from "./SingleCard";
 import "@assets/Card.css";
 import "@assets/style.css";
 
-
 function Card() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState(null);
+  // const [isLoaded, setIsLoaded] = useState(false);
+  // const [error, setError] = useState(null);
   const [drinks, setdrinks] = useState([]);
 
-  useEffect(() => {
+  useEffect(async () => {
+    const drink = await getCocktailByName("Margarita", 4);
+    setdrinks(drink);
+  }, []);
+  console.warn(drinks);
+
+  /* useEffect(() => {
     const API = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
     fetch(API)
       .then((res) => res.json())
@@ -25,13 +31,14 @@ function Card() {
   }
   if (!isLoaded) {
     return <div>Chargement...</div>;
-  }
+  } */
   return (
     <div id="section-card">
       <div className="vignette">
-        {drinks.map((nameDrink) => (
-          <SingleCard nameDrink={nameDrink} key={nameDrink.idDrink} />
-        ))}
+        {drinks &&
+          drinks.map((drink) => (
+            <SingleCard image={drink.image} id={drink.id} title={drink.title} />
+          ))}
       </div>
     </div>
   );

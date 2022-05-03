@@ -25,7 +25,7 @@
   font-size: 2rem;
 }
 
-article.articleVignette:nth-child(n)>div:nth-child(n)>button:nth-child(n) {
+article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
   background-color: transparent;
   border: 0;
   position: absolute;
@@ -58,7 +58,7 @@ article.articleVignette:nth-child(n)>div:nth-child(n)>button:nth-child(n) {
     justify-content: space-between;
   }
 
-  .articleVignette>img {
+  .articleVignette > img {
     margin-bottom: 0;
     margin-right: 1rem;
   }

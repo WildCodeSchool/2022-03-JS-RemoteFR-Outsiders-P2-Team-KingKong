@@ -1,14 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
 const getCocktailByName = async (name, number) => {
   const test = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
   const cocktailList = [];
-  const cocktail = {};
   const data = await axios
     .get(test)
     .then((response) => response.data)
     .then((data) => {
       for (let i = 0; i < number; i++) {
+        const cocktail = {};
         (cocktail.id = data.drinks[i].idDrink),
           (cocktail.title = data.drinks[i].strDrink),
           (cocktail.image = data.drinks[i].strDrinkThumb),
