@@ -5,8 +5,6 @@ import "@assets/Card.css";
 import "@assets/style.css";
 
 function Card() {
-  // const [isLoaded, setIsLoaded] = useState(false);
-  // const [error, setError] = useState(null);
   const [drinks, setdrinks] = useState([]);
 
   useEffect(async () => {
@@ -15,23 +13,6 @@ function Card() {
   }, []);
   console.warn(drinks);
 
-  /* useEffect(() => {
-    const API = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
-    fetch(API)
-      .then((res) => res.json())
-      .then((result) => {
-        setIsLoaded(true);
-        setdrinks(result.drinks);
-      });
-  }, []);
-  if (error) {
-    setIsLoaded(true);
-    setError(error);
-    return <div>Erreur : {error.message}</div>;
-  }
-  if (!isLoaded) {
-    return <div>Chargement...</div>;
-  } */
   return (
     <div id="section-card">
       <div className="vignette">

@@ -5,7 +5,6 @@ import Random from "@pages/Random";
 import Home from "@pages/Home";
 import Banner from "@components/Banner";
 import Footer from "@components/Footer";
-import Card from "@components/Card";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
 import "@assets/navbar.css";
@@ -30,7 +29,6 @@ function App() {
         <Route path="/popular-cocktail" element={<PopularCocktail />} />
         <Route path="/show-cocktail" element={<ShowCocktail />} />
       </Routes>
-      <Card />
       <Footer />
     </div>
   );

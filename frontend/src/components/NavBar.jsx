@@ -10,10 +10,10 @@ function NavBar() {
   const [cocktails, setCocktails] = useState([]);
   const [show, setShow] = useState(true);
   const controlNavbar = () => {
-    if (window.scrollY < 20) {
-      setShow(false);
-    } else {
+    if (window.scrollY >= 890) {
       setShow(true);
+    } else {
+      setShow(false);
     }
   };
   useEffect(() => {
@@ -24,38 +24,44 @@ function NavBar() {
   }, []);
 
   useEffect(async () => {
-    const cocktail = await getCocktailByName(searchValue, 10);
+    const cocktail = await getCocktailByName(searchValue, 3);
     setCocktails(cocktail);
   }, [searchValue]);
   console.warn(cocktails);
 
   return (
-    <div className={`${show && "full-navigation"}`}>
-      <nav className="navigation">
-        <ul className="navigation-bar">
-          <li className="navigation-name">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="navigation-name">
-            <Link to="/random">Random</Link>
-          </li>
-          <li className="navigation-name">
-            <Link to="/popular-cocktail">Popular</Link>
-          </li>
-        </ul>
-        <SearchBar
-          searchValue={searchValue}
-          handleSearchValue={setSearchValue}
-        />
-        {cocktails &&
-          cocktails.map((cocktail) => (
-            <SingleCard
-              image={cocktail.image}
-              id={cocktail.id}
-              title={cocktail.title}
-            />
-          ))}
-      </nav>
+    <div>
+      <div className={`${show && "full-navigation"}`}>
+        <nav className="navigation">
+          <ul className="navigation-bar">
+            <li className="navigation-name">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="navigation-name">
+              <Link to="/random">Random</Link>
+            </li>
+            <li className="navigation-name">
+              <Link to="/popular-cocktail">Popular</Link>
+            </li>
+          </ul>
+          <SearchBar
+            searchValue={searchValue}
+            handleSearchValue={setSearchValue}
+          />
+        </nav>
+      </div>
+      <div id="section-card">
+        <div className="vignette">
+          {cocktails &&
+            cocktails.map((cocktail) => (
+              <SingleCard
+                image={cocktail.image}
+                id={cocktail.id}
+                title={cocktail.title}
+              />
+            ))}
+        </div>
+      </div>
     </div>
   );
 }
