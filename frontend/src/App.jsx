@@ -5,7 +5,6 @@ import Random from "@pages/Random";
 import Home from "@pages/Home";
 import Banner from "@components/Banner";
 import Footer from "@components/Footer";
-
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
 import GoUpArrow from "@components/GoUpArrow";
