@@ -1,13 +1,15 @@
 const express = require("express");
 
-const { ItemController } = require("./controllers");
+const { ItemController,FavoriteController } = require("./controllers");
+
 
 const router = express.Router();
 
-router.get("/items", ItemController.browse);
-router.get("/items/:id", ItemController.read);
-router.put("/items/:id", ItemController.edit);
-router.post("/items", ItemController.add);
-router.delete("/items/:id", ItemController.delete);
+router.get("/api/favorite", FavoriteController.browse);
+router.get("/api/favorite/:idcocktail", FavoriteController.read);
+router.put("/api/favorite/:idcocktail", FavoriteController.edit);
+router.post("/api/favorite", FavoriteController.add);
+router.delete("/api/favorite/:idcocktail", FavoriteController.delete);
+
 
 module.exports = router;

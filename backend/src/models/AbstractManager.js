@@ -1,12 +1,12 @@
 class AbstractManager {
   constructor(connection, table) {
     this.connection = connection;
-    this.table = table;
+    this.table = table;  // favorite
   }
 
-  find(id) {
-    return this.connection.query(`select * from  ${this.table} where id = ?`, [
-      id,
+  find(idcocktail) {
+    return this.connection.query(`select * from  ${this.table} where idcocktail = ?`, [
+      idcocktail,
     ]);
   }
 
@@ -14,9 +14,9 @@ class AbstractManager {
     return this.connection.query(`select * from  ${this.table}`);
   }
 
-  delete(id) {
-    return this.connection.query(`delete from ${this.table} where id = ?`, [
-      id,
+  delete(idcocktail) {
+    return this.connection.query(`delete from ${this.table} where idcocktail = ?`, [
+      idcocktail,
     ]);
   }
 }
