@@ -20,7 +20,14 @@ a {
   text-decoration: none;
   color: var(---background-first-color);
 }
-
+@media screen and (max-width: 378px) {
+  .navigation-bar {
+    display: none;
+  }
+  .navigation {
+    padding: 0.5rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .full-navigation {
     background-color: var(---background-second-color);
