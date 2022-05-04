@@ -11,6 +11,10 @@ function Random() {
     getCocktailRandom().then((data) => setCocktail(data));
   }, []);
 
+  const handleClick = async () => {
+    await getCocktailRandom().then((data) => setCocktail(data));
+  };
+
   const [isButton, setIsButton] = useState(false);
   function clickButton() {
     setIsButton(!isButton);
@@ -18,7 +22,7 @@ function Random() {
 
   return (
     <div className="cocktailContainer">
-      <button type="button" className="moreRandom">
+      <button type="button" className="moreRandom" onClick={handleClick}>
         {" "}
         Click for more random recipes!
       </button>
