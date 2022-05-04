@@ -7,12 +7,13 @@
 }
 .navigation {
   background: var(---background-second-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navigation-bar {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
+  display: none;
 }
 
 a {
@@ -20,42 +21,76 @@ a {
   text-decoration: none;
   color: var(---background-first-color);
 }
-@media screen and (max-width: 378px) {
-  .navigation-bar {
+
+.nav-burger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: transparent;
+  color: inherit;
+  margin: 0.5rem;
+}
+.burger-bar,
+.burger-bar::before,
+.burger-bar::after {
+  display: block;
+  width: 40px;
+  height: 3px;
+  position: relative;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.burger-bar::before,
+.burger-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger-bar::before {
+  transform: translateY(-12px);
+}
+
+.burger-bar::after {
+  transform: translateY(12px);
+}
+
+@media screen and (min-width: 378px) {
+  .nav-burger {
     display: none;
   }
-  .navigation {
-    padding: 0.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .full-navigation {
-    background-color: var(---background-second-color);
+
+  .navigation-bar {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .navigation {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+
     padding: var(---marginDesktop);
   }
 
-  .navigation-bar {
-    width: 34vw;
-    display: flex;
-    justify-content: space-around;
-  }
+  @media screen and (min-width: 768px) {
+    .full-navigation {
+      background-color: var(---background-second-color);
+    }
 
-  .navigation-name {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
+    .navigation {
+      flex-direction: row;
+    }
 
-  .navigation-name:hover {
-    border-bottom: 2px solid var(---font-color-dark);
-  }
-  .navigation-name:active {
-    border-bottom: 2px solid rgba(255, 255, 124, 0.675);
+    .navigation-name {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    .navigation-name:hover {
+      border-bottom: 2px solid var(---font-color-dark);
+    }
+    .navigation-name:active {
+      border-bottom: 2px solid rgba(255, 255, 124, 0.675);
+    }
   }
 }

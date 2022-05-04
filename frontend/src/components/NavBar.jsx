@@ -49,6 +49,9 @@ function NavBar() {
             searchValue={searchValue}
             handleSearchValue={setSearchValue}
           />
+          <button type="button" className="nav-burger">
+            <span className="burger-bar" />
+          </button>
         </nav>
       </div>
       <div id="section-card">
