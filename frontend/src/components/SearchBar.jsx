@@ -8,14 +8,19 @@ function SearchBar({ searchValue, handleSearchValue }) {
       <div className="searchbar">
         <input
           value={searchValue}
-          type="text"
+          type="search"
           placeholder="Type a name or an ingredient: Mojito, Sugar..."
           className="input"
           onChange={(e) => handleSearchValue(e.target.value)}
+          src={searchlogo}
         />
-        <button type="submit" className="btn">
-          <img src={searchlogo} alt="" className="image-logo" />
-        </button>
+        <input
+          type="image"
+          id="image"
+          src={searchlogo}
+          alt=""
+          className="image-logo"
+        />
       </div>
     </div>
   );
