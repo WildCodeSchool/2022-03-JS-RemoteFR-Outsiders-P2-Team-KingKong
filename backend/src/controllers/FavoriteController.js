@@ -1,7 +1,7 @@
 const models = require("../models");
 
 class FavoriteController {
-  static browse = (req, res) => {
+  static browse = (req, res,) => {
     models.favorite
       .findAll()
       .then(([rows]) => {
@@ -15,7 +15,7 @@ class FavoriteController {
 
   static read = (req, res) => {
     models.favorite
-      .find(req.params.idcocktail)  // modif
+      .find(req.params.idcocktail) // modif
       .then(([rows]) => {
         if (rows[0] == null) {
           res.sendStatus(404);

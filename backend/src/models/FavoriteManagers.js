@@ -6,7 +6,7 @@ class FavoriteManager extends AbstractManager {
   insert(favorite) {
     return this.connection.query(
       `insert into ${FavoriteManager.table} (id,idcocktail) values (?,?)`,
-      [favorite.id,favorite.idcocktail]
+      [favorite.id, favorite.idcocktail]
     );
   }
 

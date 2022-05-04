@@ -11,6 +11,7 @@ import ShowCocktail from "@components/ShowCocktail";
 import GoUpArrow from "@components/GoUpArrow";
 import "@assets/navbar.css";
 import "@assets/app.css";
+import Favorite from "@components/Favorite";
 
 function App() {
   // Ne pas effacer pour le moment
@@ -30,10 +31,10 @@ function App() {
         <Route path="/random" element={<Random />} />
         <Route path="/popular-cocktail" element={<PopularCocktail />} />
         <Route path="/show-cocktail" element={<ShowCocktail />} />
+        <Route path="/Favorite" element={<Favorite />} />
       </Routes>
       <GoUpArrow />
       <Card />
-
       <Footer />
     </div>
   );
