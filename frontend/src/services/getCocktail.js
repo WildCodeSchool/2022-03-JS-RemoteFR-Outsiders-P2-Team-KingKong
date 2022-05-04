@@ -67,12 +67,12 @@ function getMeasuresToArray(list) {
 const getCocktailById = async (idDrink) => {
   const test = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink}`;
   const cocktailList = [];
-  const cocktail = {};
   const data = await axios
     .get(test)
     .then((response) => response.data)
     .then((data) => {
       for (let i = 0; i < data.drinks.length; i++) {
+        const cocktail = {};
         (cocktail.id = data.drinks[i].idDrink),
           (cocktail.title = data.drinks[i].strDrink),
           (cocktail.image = data.drinks[i].strDrinkThumb),
@@ -86,4 +86,25 @@ const getCocktailById = async (idDrink) => {
   return cocktailList[0];
 };
 
-export { getCocktailByName, getCocktailById };
+const getCocktailRandom = async () => {
+  const test = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
+  const cocktailList = [];
+  const data = await axios
+    .get(test)
+    .then((response) => response.data)
+    .then((data) => {
+      for (let i = 0; i < data.drinks.length; i++) {
+        const cocktail = {};
+        (cocktail.id = data.drinks[i].idDrink),
+          (cocktail.title = data.drinks[i].strDrink),
+          (cocktail.image = data.drinks[i].strDrinkThumb),
+          (cocktail.instructions = data.drinks[i].strInstructions),
+          (cocktail.ingredients = getIngredientsToArray(data.drinks[i])),
+          (cocktail.quantity = getMeasuresToArray(data.drinks[i])),
+          cocktailList.push(cocktail);
+      }
+    });
+  return cocktailList[0];
+};
+
+export { getCocktailByName, getCocktailById, getCocktailRandom };

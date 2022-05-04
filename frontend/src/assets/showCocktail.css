@@ -1,4 +1,5 @@
 .cocktailContainer {
+  padding-top: 3rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8,12 +9,22 @@ h1 {
   color: var(---font-color-light);
 }
 
+.moreRandom {
+  padding: 0.8rem;
+  font-size: var(---font-size--p);
+  margin: 0 auto;
+  color: var(---font-color-light);
+  background-color: var(---background-first-color);
+  border-color: var(---background-second-color);
+  border-radius: var(---border-radius);
+}
+
 .fav {
   color: var(---font-color-light);
   text-align: right;
   margin-bottom: 1rem;
 }
-button {
+.heart {
   font-size: 2rem;
   background-color: transparent;
   border: 0;
