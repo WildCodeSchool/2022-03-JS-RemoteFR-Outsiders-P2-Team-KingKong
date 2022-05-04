@@ -9,16 +9,16 @@ function NavBar() {
 
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
-    if (scrollY >= 890) {
+    if (window.scrollY >= 890) {
       setShow(true);
     } else {
       setShow(false);
     }
   };
   useEffect(() => {
-    addEventListener("scroll", controlNavbar);
+    window.addEventListener("scroll", controlNavbar);
     return () => {
-      removeEventListener("scroll", controlNavbar);
+      window.removeEventListener("scroll", controlNavbar);
     };
   }, []);
 
