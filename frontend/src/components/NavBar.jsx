@@ -9,6 +9,7 @@ function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails, setCocktails] = useState([]);
   const [show, setShow] = useState(true);
+  
   const controlNavbar = () => {
     if (window.scrollY >= 890) {
       setShow(true);
