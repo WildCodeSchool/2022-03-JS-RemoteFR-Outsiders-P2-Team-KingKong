@@ -7,19 +7,19 @@ function Random() {
   const [cocktail, setCocktail] = useState({});
 
   // Appel API
-
   useEffect(() => {
     getCocktailRandom().then((data) => setCocktail(data));
   }, []);
 
-  const [button, setButton] = useState(false);
+  const [isButton, setIsButton] = useState(false);
   function clickButton() {
-    setButton(!button);
+    setIsButton(!isButton);
   }
 
   return (
     <div className="cocktailContainer">
       <button type="button" className="moreRandom">
+        {" "}
         Click for more random recipes!
       </button>
       <div className="drinkName">
@@ -27,10 +27,10 @@ function Random() {
         <p className="fav">
           Ajouter dans mes favoris{" "}
           <button onClick={clickButton} type="button" className="heart">
-            {button ? (
-              <i id={cocktail.id} className="fa-solid fa-heart" />
+            {isButton ? (
+              <i className="fa-solid fa-heart" />
             ) : (
-              <i id={cocktail.id} className="fa-regular fa-heart" />
+              <i className="fa-regular fa-heart" />
             )}
           </button>
         </p>
