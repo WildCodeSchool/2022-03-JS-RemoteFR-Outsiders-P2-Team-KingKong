@@ -48,13 +48,13 @@ function Random() {
           <ul>
             {cocktail.ingredients &&
               cocktail.ingredients.map((ingredient) => (
-                <li key={cocktail.id}>{ingredient}</li>
+                <li key={cocktail.ingredients.id}>{ingredient}</li>
               ))}
           </ul>
           <ul>
             {cocktail.quantity &&
               cocktail.quantity.map((measure) => (
-                <li key={cocktail.id}>{measure}</li>
+                <li key={cocktail.quantity.id}>{measure}</li>
               ))}
           </ul>
         </div>
