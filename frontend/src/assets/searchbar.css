@@ -5,7 +5,9 @@
 }
 
 .image-logo {
-  width: 20px;
+  width: 40px;
+  background-color: white;
+  padding: 2%;
 }
 
 .input {
@@ -32,6 +34,7 @@
   .full-searchbar {
     display: flex;
     justify-content: flex-end;
+    padding: 1%;
   }
 
   .searchbar {

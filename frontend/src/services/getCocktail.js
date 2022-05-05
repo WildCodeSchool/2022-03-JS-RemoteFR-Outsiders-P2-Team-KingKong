@@ -1,8 +1,11 @@
 import axios from "axios";
 
-const getCocktailByName = async (name, number) => {
+const getCocktailByName = async (name, number, isEmpty = false) => {
   const test = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
   const cocktailList = [];
+  if (isEmpty === true) {
+    return;
+  }
   const data = await axios
     .get(test)
     .then((response) => response.data)
