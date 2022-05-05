@@ -1,8 +1,7 @@
 import "../assets/MajorityCheck.css";
 import { useState } from "react";
 import logo from "@assets/banner-logo.svg";
-
-// eslint-disable-next-line react/prop-types
+// import { layer } from "@fortawesome/fontawesome-svg-core";
 
 export default function MajorityCheck() {
   const logoStyle = {
@@ -31,7 +30,7 @@ export default function MajorityCheck() {
   const [display, setDisplay] = useState(true);
 
   function hideLayer() {
-    setDisplay(false);
+    setDisplay(!display);
   }
 
   return (
@@ -40,7 +39,7 @@ export default function MajorityCheck() {
       <p style={textStyle} className="neonText">
         Avez-vous plus de 18 ans ?
       </p>
-      <div>
+      <div className="bt">
         <button
           type="button"
           style={buttonStyle}
@@ -49,7 +48,7 @@ export default function MajorityCheck() {
         >
           Oui
         </button>
-        <button type="button" style={buttonStyle}>
+        <button type="button" style={buttonStyle} className="btn">
           Non
         </button>
       </div>
