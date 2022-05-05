@@ -6,6 +6,6 @@
 .goup-part {
   margin-left: 93vw;
   color: white;
-  position: sticky;
+  position: fixed;
   top: 50%;
 }

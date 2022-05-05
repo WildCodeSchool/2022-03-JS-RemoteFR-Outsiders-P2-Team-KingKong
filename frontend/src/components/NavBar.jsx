@@ -11,7 +11,6 @@ function NavBar() {
   const [isShow, setIsShow] = useState(false);
   // const [isSearch, setIsSearch] = useState(true);
 
-
   const controlNavbar = () => {
     if (window.scrollY > 620) {
       setIsShow(true);
@@ -39,7 +38,7 @@ function NavBar() {
   console.warn(cocktails);
 
   return (
-    <div>
+    <>
       <div className={`${isShow && "full-navigation"}`}>
         <nav className="navigation">
           <ul className="navigation-bar">
@@ -59,7 +58,7 @@ function NavBar() {
           />
         </nav>
       </div>
-      <div className="vignette" id="section-card">
+      <div id="section-card">
         {cocktails &&
           cocktails.map((cocktail) => (
             <SingleCard
@@ -69,7 +68,7 @@ function NavBar() {
             />
           ))}
       </div>
-    </div>
+    </>
   );
 }
 
