@@ -11,6 +11,7 @@ function NavBar() {
   const [isShow, setIsShow] = useState(false);
   // const [isSearch, setIsSearch] = useState(true);
 
+
   const controlNavbar = () => {
     if (window.scrollY > 620) {
       setIsShow(true);
