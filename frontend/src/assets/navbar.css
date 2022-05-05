@@ -5,7 +5,6 @@
   z-index: 99;
   border-bottom: thin solid var(---background-first-color);
 }
-
 .navigation {
   background: var(---background-second-color);
 }
@@ -36,7 +35,7 @@ a {
   }
 
   .navigation-bar {
-    width: 34vw;
+    width: 60vw;
     display: flex;
     justify-content: space-around;
   }
@@ -44,10 +43,13 @@ a {
   .navigation-name {
     padding-left: 2%;
     padding-right: 2%;
-    border-radius: 10px;
   }
 
   .navigation-name:hover {
-    background-color: #c4b18a;
+    border-bottom: 2px solid var(---font-color-dark);
+  }
+
+  .navigation-name:active {
+    border-bottom: 2px solid rgba(255, 255, 124, 0.675);
   }
 }

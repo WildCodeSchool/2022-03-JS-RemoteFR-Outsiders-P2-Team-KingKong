@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
 }
 
 .articleVignette {
@@ -16,13 +15,15 @@
   justify-content: center;
   margin-bottom: 2rem;
   padding: 15px;
+  margin-top: 20%;
   background-color: var(---background-second-color-transparent);
   border-radius: var(---border-radius);
 }
 
 .fa-heart {
-  color: red;
+  color: rgb(143, 10, 10);
   font-size: 2rem;
+  cursor: pointer;
 }
 
 article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
@@ -38,6 +39,10 @@ article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
   position: relative;
   padding-bottom: 50px;
 }
+/*#section-card{
+  padding: 0;
+  margin: 0;
+}*/
 
 @media screen and (min-width: 768px) {
   .articleVignette {
@@ -54,8 +59,9 @@ article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
     flex-direction: row;
     width: 70%;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
     justify-content: space-between;
+
+    padding-top: 2rem;
   }
 
   .articleVignette > img {

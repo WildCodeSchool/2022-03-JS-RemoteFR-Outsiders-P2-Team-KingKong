@@ -1,0 +1,11 @@
+.goup-logo {
+  width: 30px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(286deg)
+    brightness(103%) contrast(103%);
+}
+.goup-part {
+  margin-left: 93vw;
+  color: white;
+  position: fixed;
+  top: 50%;
+}
