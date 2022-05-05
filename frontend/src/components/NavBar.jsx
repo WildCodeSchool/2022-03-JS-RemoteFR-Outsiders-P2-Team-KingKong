@@ -26,8 +26,8 @@ function NavBar() {
     <div className={`${show && "full-navigation"}`}>
       <nav className="navigation">
         <ul className="navigation-bar">
-        <li className="navigation-name">
-            <Link to="/Favorite">favorite</Link> 
+          <li className="navigation-name">
+            <Link to="/Favorite">favorite</Link>
             {/* a changer de place  */}
           </li>
           <li className="navigation-name">
@@ -39,7 +39,6 @@ function NavBar() {
           <li className="navigation-name">
             <Link to="/popular-cocktail">Popular</Link>
           </li>
-          
         </ul>
         <SearchBar
           searchValue={searchValue}

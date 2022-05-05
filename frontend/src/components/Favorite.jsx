@@ -1,27 +1,33 @@
-import React, {useEffect, useState} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-
+import "@assets/Card.css";
+import "@assets/style.css";
+import SingleCardFavoris from "./SingleCardFavoris";
 
 function Favorite() {
-  //const [cocktail, setcocktail] = useState("");
-  const API = `http://localhost:5000/api/favorite`;
+  const [data, setdata] = useState([]);
+
   useEffect(() => {
-    console.log(API);
-    axios.get(API)
-        .then(response => response.data)
-        .then(data => {
-          console.log(data);
-         // setcocktail(data.cocktail.idcocktail);
-            
-        })
-        .catch(e => console.error(e));
-}, [])
+    const API = `http://localhost:5000/api/favorite`;
+    axios
+      .get(API)
+      .then((res) => res.data)
+      .then((data) => {
+        setdata(data);
+      })
+      .catch((e) => console.error(e));
+  }, []);
 
   return (
-    <div>
-      <h1>coucou </h1>
-   
+    <div id="section-card">
+      <div className="vignette">
+        {data.map((idFavorite) => (
+          <SingleCardFavoris
+            idFavorite={idFavorite}
+            key={idFavorite.idcocktail}
+          />
+        ))}
+      </div>
     </div>
   );
 }

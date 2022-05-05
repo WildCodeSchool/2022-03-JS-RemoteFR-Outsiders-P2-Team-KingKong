@@ -3,6 +3,12 @@ const express = require("express");
 const { FavoriteController } = require("./controllers");
 
 
+const app = express();
+
+
+
+
+
 const router = express.Router();
 
 router.get("/api/favorite", FavoriteController.browse);
