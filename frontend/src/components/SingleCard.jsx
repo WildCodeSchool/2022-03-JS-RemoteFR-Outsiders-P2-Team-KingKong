@@ -6,7 +6,7 @@ function SingleCard({ image, id, title }) {
   function clickButton() {
     setButton(!button);
   }
-  
+
   return (
     <Link to={`/show-cocktail/${id}`}>
       <article className="articleVignette">
@@ -14,9 +14,9 @@ function SingleCard({ image, id, title }) {
         <div className="blocText">
           <button onClick={clickButton} type="button">
             {button ? (
-            <i id={id} className="fa-solid fa-heart" />
+              <i id={id} className="fa-solid fa-heart" />
             ) : (
-            <i id={id} className="fa-regular fa-heart" />
+              <i id={id} className="fa-regular fa-heart" />
             )}
           </button>
           <h2>{title}</h2>
