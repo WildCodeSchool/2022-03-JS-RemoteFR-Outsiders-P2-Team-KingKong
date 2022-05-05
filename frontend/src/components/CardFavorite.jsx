@@ -1,10 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "@assets/Card.css";
+import "@assets/style.css";
+import axios from "axios";
 
 function SingleCard({ nameDrink }) {
-  const [button, setButton] = React.useState(false);
+  const [button, setButton] = React.useState(true);
   function clickButton() {
     setButton(!button);
+
+    if (!button) {
+      axios
+        .post("http://localhost:5000/api/favorite", {
+          id: 1,
+          idcocktail: nameDrink.idDrink,
+        })
+        .then((res) => res.data);
+    } else {
+      axios
+        .delete(`http://localhost:5000/api/favorite/${nameDrink.idDrink}`)
+        .then((res) => res.data);
+    }
   }
 
   return (
@@ -27,6 +43,7 @@ function SingleCard({ nameDrink }) {
         </button>
 
         <h2>{nameDrink.strDrink}</h2>
+        <p>cocktail recipe</p>
       </div>
     </article>
   );

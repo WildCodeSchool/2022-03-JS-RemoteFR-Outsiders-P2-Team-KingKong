@@ -12,8 +12,8 @@ function Favorite() {
     axios
       .get(API)
       .then((res) => res.data)
-      .then((data) => {
-        setdata(data);
+      .then((data2) => {
+        setdata(data2);
       })
       .catch((e) => console.error(e));
   }, []);

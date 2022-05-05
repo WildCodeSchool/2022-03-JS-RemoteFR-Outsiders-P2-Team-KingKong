@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardFavorite from "./CardFavorite";
+import "@assets/Card.css";
+import "@assets/style.css";
 
 function SingleCardFavoris({ idFavorite }) {
   const [drinks, setdrinks] = useState([]);

@@ -1,10 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function SingleCard({ nameDrink }) {
   const [button, setButton] = React.useState(false);
   function clickButton() {
     setButton(!button);
+    if (!button) {
+      axios
+        .post("http://localhost:5000/api/favorite", {
+          id: 1,
+          idcocktail: nameDrink.idDrink,
+        })
+        .then((res) => res.data);
+    } else {
+      axios
+        .delete(`http://localhost:5000/api/favorite/${nameDrink.idDrink}`)
+        .then((res) => res.data);
+    }
   }
 
   return (

@@ -2,12 +2,7 @@ const express = require("express");
 
 const { FavoriteController } = require("./controllers");
 
-
-const app = express();
-
-
-
-
+// const app = express();
 
 const router = express.Router();
 
