@@ -8,12 +8,25 @@
 .navigation {
   background: var(---background-second-color);
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
 .navigation-bar {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-links-burger {
   display: none;
+}
+
+.show-links-burger {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 1rem;
+  gap: 1rem;
 }
 
 a {
@@ -29,6 +42,9 @@ a {
   border: transparent;
   color: inherit;
   margin: 0.5rem;
+}
+.nav-burger:hover {
+  cursor: pointer;
 }
 .burger-bar,
 .burger-bar::before,
@@ -63,6 +79,7 @@ a {
   .navigation-bar {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
   }
 
@@ -79,6 +96,9 @@ a {
 
     .navigation {
       flex-direction: row;
+    }
+    .navigation-bar {
+      padding-top: 0;
     }
 
     .navigation-name {

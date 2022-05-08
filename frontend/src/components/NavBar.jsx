@@ -10,6 +10,13 @@ function NavBar() {
   const [cocktails, setCocktails] = useState([]);
   const [show, setShow] = useState(true);
 
+  const [showLinks, setShowLinks] = useState(false);
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
+  console.warn(showLinks);
+
   const controlNavbar = () => {
     if (window.scrollY >= 890) {
       setShow(true);
@@ -34,7 +41,11 @@ function NavBar() {
     <div>
       <div className={`${show && "full-navigation"}`}>
         <nav className="navigation">
-          <ul className="navigation-bar">
+          <ul
+            className={`navigation-bar ${
+              showLinks ? "show-links-burger" : "hide-links-burger"
+            }`}
+          >
             <li className="navigation-name">
               <Link to="/">Home</Link>
             </li>
@@ -45,13 +56,17 @@ function NavBar() {
               <Link to="/popular-cocktail">Popular</Link>
             </li>
           </ul>
+          <button
+            type="button"
+            className="nav-burger"
+            onClick={handleShowLinks}
+          >
+            <span className="burger-bar" />
+          </button>
           <SearchBar
             searchValue={searchValue}
             handleSearchValue={setSearchValue}
           />
-          <button type="button" className="nav-burger">
-            <span className="burger-bar" />
-          </button>
         </nav>
       </div>
       <div id="section-card">
