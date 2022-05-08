@@ -82,6 +82,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 0.8rem 0 0 0;
   }
 
   .navigation {
@@ -90,7 +91,7 @@ a {
     padding: var(---marginDesktop);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     .full-navigation {
       background-color: var(---background-second-color);
     }
