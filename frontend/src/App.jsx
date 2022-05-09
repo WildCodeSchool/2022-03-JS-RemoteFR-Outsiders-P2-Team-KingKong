@@ -8,7 +8,7 @@ import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
 import GoUpArrow from "@components/GoUpArrow";
-// import Card from "@components/Card";
+import Favorite from "@components/Favorite";
 import "@assets/navbar.css";
 import "@assets/app.css";
 
@@ -30,8 +30,10 @@ function App() {
         <Route path="/random" element={<Random />} />
         <Route path="/popular-cocktail" element={<PopularCocktail />} />
         <Route path="/show-cocktail/:idDrink" element={<ShowCocktail />} />
+        <Route path="/favorite" element={<Favorite />} />
       </Routes>
       <GoUpArrow />
+      <Card />
       <Footer />
     </div>
   );
