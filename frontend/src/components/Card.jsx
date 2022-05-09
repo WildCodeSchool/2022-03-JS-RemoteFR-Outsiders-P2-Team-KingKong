@@ -5,21 +5,24 @@ import "@assets/Card.css";
 import "@assets/style.css";
 
 function Card() {
-  const [drinks, setdrinks] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
 
   useEffect(async () => {
-    const drink = await getCocktailByName("Margarita", 4);
-    setdrinks(drink);
-  }, []);
-  console.warn(drinks);
+    const cocktail = await getCocktailByName(cocktails, 10, false);
+    setCocktails(cocktail);
+  }, [cocktails]);
+  console.warn(cocktails);
 
   return (
     <div id="section-card">
       <div className="vignette">
-        {drinks &&
-          drinks.map((drink) => (
-            <SingleCard image={drink.image} id={drink.id} title={drink.title} />
-          ))}
+        {cocktails.map((cocktail) => (
+          <SingleCard
+            image={cocktail.image}
+            id={cocktail.id}
+            title={cocktail.title}
+          />
+        ))}
       </div>
     </div>
   );

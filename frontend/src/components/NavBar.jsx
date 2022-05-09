@@ -8,20 +8,18 @@ import SingleCard from "./SingleCard";
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails, setCocktails] = useState([]);
-  const [show, setShow] = useState(true);
-
-  const [showLinks, setShowLinks] = useState(false);
-
+  const [isShow, setIsShow] = useState(false);
+  const [isShowLinks, setIsShowLinks] = useState(false);
+  
   const handleShowLinks = () => {
-    setShowLinks(!showLinks);
+    setIsShowLinks(!isShowLinks);
   };
-  console.warn(showLinks);
 
   const controlNavbar = () => {
-    if (window.scrollY >= 890) {
-      setShow(true);
+    if (window.scrollY > 620) {
+      setIsShow(true);
     } else {
-      setShow(false);
+      setIsShow(false);
     }
   };
   useEffect(() => {
@@ -32,18 +30,23 @@ function NavBar() {
   }, []);
 
   useEffect(async () => {
-    const cocktail = await getCocktailByName(searchValue, 3);
+    let empty = false;
+    if (searchValue.length === 0) {
+      empty = true;
+    } else {
+      empty = false;
+    }
+    const cocktail = await getCocktailByName(searchValue, 10, empty);
     setCocktails(cocktail);
   }, [searchValue]);
-  console.warn(cocktails);
 
   return (
-    <div>
-      <div className={`${show && "full-navigation"}`}>
+    <>
+      <div className={`${isShow && "full-navigation"}`}>
         <nav className="navigation">
           <ul
             className={`navigation-bar ${
-              showLinks ? "show-links-burger" : "hide-links-burger"
+              isShowLinks ? "show-links-burger" : "hide-links-burger"
             }`}
           >
             <li className="navigation-name">
@@ -70,18 +73,16 @@ function NavBar() {
         </nav>
       </div>
       <div id="section-card">
-        <div className="vignette">
-          {cocktails &&
-            cocktails.map((cocktail) => (
-              <SingleCard
-                image={cocktail.image}
-                id={cocktail.id}
-                title={cocktail.title}
-              />
-            ))}
-        </div>
+        {cocktails &&
+          cocktails.map((cocktail) => (
+            <SingleCard
+              image={cocktail.image}
+              id={cocktail.id}
+              title={cocktail.title}
+            />
+          ))}
       </div>
-    </div>
+    </>
   );
 }
 
