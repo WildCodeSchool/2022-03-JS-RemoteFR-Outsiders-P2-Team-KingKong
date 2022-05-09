@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;1,100&display=swap");
 
 :root {
-  ---background-first-color: #06070e;
+  ---background-first-color: #19191ce3;
   ---background-second-color: #f19e50;
   ---background-second-color-transparent: #f19e50c7;
 
@@ -13,7 +13,7 @@
   ---fontsize--h2: clamp(1.4rem, 1vh, 1.8rem);
   ---font-size--p: clamp(1rem, 1vh, 1.7rem);
 
-  ---line-height--ul: 3rem;
+  ---line-height--ul: 2.2rem;
   ---line-height--p: 1.5rem;
 
   ---font-family: "Overpass", sans-serif;

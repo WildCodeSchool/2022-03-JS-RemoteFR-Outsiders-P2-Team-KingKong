@@ -1,4 +1,5 @@
 .cocktailContainer {
+  padding-top: 5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8,12 +9,22 @@ h1 {
   color: var(---font-color-light);
 }
 
+.moreRandom {
+  padding: 0.8rem;
+  font-size: var(---font-size--p);
+  margin: 0 auto;
+  color: var(---font-color-light);
+  background-color: var(---background-first-color);
+  border-color: var(---background-second-color);
+  border-radius: var(---border-radius);
+}
+
 .fav {
   color: var(---font-color-light);
   text-align: right;
   margin-bottom: 1rem;
 }
-button {
+.heart {
   font-size: 2rem;
   background-color: transparent;
   border: 0;
@@ -30,8 +41,12 @@ button {
   width: 60%;
   border-radius: var(---border-radius);
   align-self: center;
-  align-content: center;
   text-align: center;
+}
+
+.list-ingredients-quantity {
+  display: flex;
+  justify-content: space-around;
 }
 .row {
   height: 0.1rem;
@@ -51,7 +66,7 @@ button {
 ul {
   margin: 0;
   list-style-type: none;
-  text-align: center;
+  text-align: left;
   line-height: var(---line-height--ul);
 }
 
@@ -100,6 +115,7 @@ p {
   .recipe {
     margin: 0;
     margin-top: 3rem;
+    width: 100%;
   }
 
   .row {

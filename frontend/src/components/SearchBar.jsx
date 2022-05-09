@@ -2,21 +2,25 @@ import React from "react";
 import searchlogo from "../assets/magnifying-glass-search-svgrepo-com.svg";
 import "../assets/searchbar.css";
 
-function SearchBar(props) {
-  const { searchValue, handleSearchValue } = props;
+function SearchBar({ searchValue, handleSearchValue }) {
   return (
     <div className="full-searchbar">
       <div className="searchbar">
         <input
           value={searchValue}
-          type="text"
-          placeholder="Mojito..."
+          type="search"
+          placeholder="Type a name or an ingredient: Mojito, Sugar..."
           className="input"
           onChange={(e) => handleSearchValue(e.target.value)}
+          src={searchlogo}
         />
-        <button type="button" className="btn">
-          <img src={searchlogo} alt="" className="image-logo" />
-        </button>
+        <input
+          type="image"
+          id="image"
+          src={searchlogo}
+          alt=""
+          className="image-logo"
+        />
       </div>
     </div>
   );
