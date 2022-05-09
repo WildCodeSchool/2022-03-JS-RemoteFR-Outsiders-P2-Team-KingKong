@@ -25,7 +25,7 @@ function SingleCard({ nameDrink }) {
 
   return (
     <article className="articleVignette">
-      <Link to="/show-cocktail">
+      <Link to={`/show-cocktail/${nameDrink.idDrink}`}>
         <img
           className="imgCocktail"
           src={nameDrink.strDrinkThumb}

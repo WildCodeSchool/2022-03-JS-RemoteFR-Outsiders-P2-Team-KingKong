@@ -2,7 +2,7 @@ class AbstractManager {
   constructor(connection, table) {
     this.connection = connection;
     this.table = table; // favorite
-   // this.tableUsers = tableUsers; // users
+    // this.tableUsers = tableUsers; // users
   }
 
   find(idcocktail) {

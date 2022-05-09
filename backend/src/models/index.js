@@ -26,7 +26,7 @@ const load = (models) => {
 
           // eslint-disable-next-line no-param-reassign
           models[Manager.table] = new Manager(connection, Manager.table);
-          //models[Manager.tableUsers] = new Manager(connection, Manager.tableUsers); // test
+          // models[Manager.tableUsers] = new Manager(connection, Manager.tableUsers); // test
         });
     })
     .catch(() => {

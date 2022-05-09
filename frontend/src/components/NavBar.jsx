@@ -10,7 +10,7 @@ function NavBar() {
   const [cocktails, setCocktails] = useState([]);
   const [isShow, setIsShow] = useState(false);
   const [isShowLinks, setIsShowLinks] = useState(false);
-  
+
   const handleShowLinks = () => {
     setIsShowLinks(!isShowLinks);
   };
@@ -57,6 +57,9 @@ function NavBar() {
             </li>
             <li className="navigation-name">
               <Link to="/popular-cocktail">Popular</Link>
+            </li>
+            <li className="navigation-name">
+              <Link to="/favorite">Favorite</Link>
             </li>
           </ul>
           <button

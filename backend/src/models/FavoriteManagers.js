@@ -10,12 +10,12 @@ class FavoriteManager extends AbstractManager {
     );
   }
 
-//   update(favorite) {
-//     return this.connection.query(
-//       `update ${FavoriteManager.table} set title = ? where id = ?`,
-//       [favorite.title, favorite.id]
-//     );
-//   }
- }
+  //   update(favorite) {
+  //     return this.connection.query(
+  //       `update ${FavoriteManager.table} set title = ? where id = ?`,
+  //       [favorite.title, favorite.id]
+  //     );
+  //   }
+}
 
 module.exports = FavoriteManager;

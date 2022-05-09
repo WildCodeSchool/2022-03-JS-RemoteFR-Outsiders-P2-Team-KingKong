@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { UsersController , FavoriteController } = require("./controllers");
+const { UsersController, FavoriteController } = require("./controllers");
 
 // const app = express();
 
