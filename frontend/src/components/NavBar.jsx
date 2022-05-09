@@ -9,7 +9,11 @@ function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails, setCocktails] = useState([]);
   const [isShow, setIsShow] = useState(false);
-  // const [isSearch, setIsSearch] = useState(true);
+  const [isShowLinks, setIsShowLinks] = useState(false);
+  
+  const handleShowLinks = () => {
+    setIsShowLinks(!isShowLinks);
+  };
 
   const controlNavbar = () => {
     if (window.scrollY > 620) {
@@ -35,13 +39,16 @@ function NavBar() {
     const cocktail = await getCocktailByName(searchValue, 10, empty);
     setCocktails(cocktail);
   }, [searchValue]);
-  console.warn(cocktails);
 
   return (
     <>
       <div className={`${isShow && "full-navigation"}`}>
         <nav className="navigation">
-          <ul className="navigation-bar">
+          <ul
+            className={`navigation-bar ${
+              isShowLinks ? "show-links-burger" : "hide-links-burger"
+            }`}
+          >
             <li className="navigation-name">
               <Link to="/">Home</Link>
             </li>
@@ -52,6 +59,13 @@ function NavBar() {
               <Link to="/popular-cocktail">Popular</Link>
             </li>
           </ul>
+          <button
+            type="button"
+            className="nav-burger"
+            onClick={handleShowLinks}
+          >
+            <span className="burger-bar" />
+          </button>
           <SearchBar
             searchValue={searchValue}
             handleSearchValue={setSearchValue}
