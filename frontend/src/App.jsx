@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import PopularCocktail from "@pages/PopularCocktail";
 import Random from "@pages/Random";
 import Home from "@pages/Home";
+import Card from "@components/Card";
 import Banner from "@components/Banner";
 import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
