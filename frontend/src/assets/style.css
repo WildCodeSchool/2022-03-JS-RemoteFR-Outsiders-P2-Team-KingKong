@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;1,100&display=swap");
 
 :root {
-  ---background-first-color: #19191ce3;
-  ---background-second-color: #f19e50;
-  ---background-second-color-transparent: #f19e50c7;
+  ---background-first-color: #121213;
+  ---background-second-color-transparent: #171716f1;
+  ---border: solid 2px #12c4e8;
 
   ---font-color-light: #fbeeee;
   ---font-color-dark: #1c1c1c;
@@ -19,7 +19,6 @@
   ---font-family: "Overpass", sans-serif;
 
   ---border-radius: 0.5rem;
-  ---box-shadow: -10px 9px 29px -9px rgba(74, 74, 74, 0.87);
   ---marginDesktop: 0 15%;
   ---marginTablet: 0 3%;
 }
@@ -29,10 +28,9 @@
   margin: 0;
   padding: 0;
   font-family: var(---font-family);
-  color: var(---font-color-dark);
+  color: var(---font-color-light);
   scroll-behavior: smooth;
   font-weight: 600;
-  color: var(---font-color-dark);
 }
 
 h1 {

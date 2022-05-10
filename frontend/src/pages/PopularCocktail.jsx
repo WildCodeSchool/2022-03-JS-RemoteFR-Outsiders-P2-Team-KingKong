@@ -1,12 +1,12 @@
 import React from "react";
 import PopularCocktailList from "@components/PopularCocktailList";
 import drinks from "@services/data.json";
-import "@assets/popularcocktail.css";
+import "@assets/titles.css";
 
 function PopularCocktail() {
   return (
     <>
-      <h1 className="popularcocktail-title">OUR TOP 10</h1>
+      <h1 className="titles">OUR TOP 10</h1>
       <PopularCocktailList drinks={drinks} />
     </>
   );

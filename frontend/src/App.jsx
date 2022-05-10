@@ -8,19 +8,11 @@ import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 import ShowCocktail from "@components/ShowCocktail";
 import GoUpArrow from "@components/GoUpArrow";
-// import Card from "@components/Card";
+import Favorite from "@components/Favorite";
 import "@assets/navbar.css";
 import "@assets/app.css";
 
 function App() {
-  // Ne pas effacer pour le moment
-  // React.useEffect(async () => {
-  //   // INFO: Ici, nous récuperons les informations de la recette
-  //   // Via un appel à la fonction "getCocktailByName" de manière asynchrone.
-  //   // Ceci est un exemple de requête. Je le laisse pour les autres dev.
-  //   // console.warn(await getCocktailByName('vodka', 4));
-  // }, []);
-
   return (
     <div>
       <Banner />
@@ -30,6 +22,7 @@ function App() {
         <Route path="/random" element={<Random />} />
         <Route path="/popular-cocktail" element={<PopularCocktail />} />
         <Route path="/show-cocktail/:idDrink" element={<ShowCocktail />} />
+        <Route path="/favorite" element={<Favorite />} />
       </Routes>
       <GoUpArrow />
       <Footer />
