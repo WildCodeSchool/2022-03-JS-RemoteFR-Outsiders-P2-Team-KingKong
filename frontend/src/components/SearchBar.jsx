@@ -2,19 +2,25 @@ import React from "react";
 import searchlogo from "../assets/magnifying-glass-search-svgrepo-com.svg";
 import "../assets/searchbar.css";
 
-function SearchBar({ searchValue, handleSearchValue }) {
+function SearchBar({ searchValue, setSearchValue }) {
+  const handleChange = (event) => {
+    setSearchValue(event.target.value);
+  };
+
   return (
     <div className="full-searchbar">
       <div className="searchbar">
         <input
+          id="search"
           value={searchValue}
           type="search"
-          placeholder="Type a name or an ingredient: Mojito, Sugar..."
+          name="search"
+          placeholder="Type something: Mojito, Lemon..."
           className="input"
-          onChange={(e) => handleSearchValue(e.target.value)}
-          src={searchlogo}
+          onChange={handleChange}
         />
         <input
+          value="Submit"
           type="image"
           id="image"
           src={searchlogo}

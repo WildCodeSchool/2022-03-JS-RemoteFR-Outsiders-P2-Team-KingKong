@@ -9,7 +9,6 @@ import MajorityCheck from "./components/MajorityCheck";
 ReactDOM.render(
   <BrowserRouter>
     <MajorityCheck />
-    display?
     <App />
   </BrowserRouter>,
   document.getElementById("root")
