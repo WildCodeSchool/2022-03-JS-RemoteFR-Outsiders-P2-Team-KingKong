@@ -45,7 +45,6 @@ function SingleCard({ image, id, title, setSearchValue }) {
           )}
         </button>
         <h2>{title}</h2>
-        <p>See cocktail recipe</p>
       </div>
     </article>
   );

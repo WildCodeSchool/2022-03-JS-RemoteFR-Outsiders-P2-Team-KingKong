@@ -5,7 +5,7 @@
 }
 
 .footer {
-  background: var(---background-second-color);
+  background: var(---background-first-color);
   width: 100%;
   font-family: "Overpass";
   bottom: 0;

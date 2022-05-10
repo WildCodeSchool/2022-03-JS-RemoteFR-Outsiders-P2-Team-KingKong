@@ -22,7 +22,6 @@ function PopularCocktailCard({ image, id, title }) {
           )}
         </button>
         <h2>{title}</h2>
-        <p>See cocktail recipe</p>
       </div>
     </article>
   );

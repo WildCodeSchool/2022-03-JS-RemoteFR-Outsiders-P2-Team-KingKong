@@ -1,5 +1,4 @@
 .cocktailContainer {
-  padding-top: 5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -10,13 +9,41 @@ h1 {
 }
 
 .moreRandom {
-  padding: 0.8rem;
+  width: 80px;
+  height: auto;
   font-size: var(---font-size--p);
   margin: 0 auto;
+  padding: 0;
   color: var(---font-color-light);
-  background-color: var(---background-first-color);
+  background-color: var(---background-second-color-transparent);
   border-color: var(---background-second-color);
   border-radius: var(---border-radius);
+}
+
+button > img:hover {
+  animation: shake 0.82s;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 .fav {
@@ -40,6 +67,8 @@ h1 {
   background-color: var(---background-second-color-transparent);
   width: 60%;
   border-radius: var(---border-radius);
+  border: var(---border);
+  box-shadow: inset -2px -2px 10px #74ea62, 1px 1px 10px #74ea62;
   align-self: center;
   text-align: center;
 }
@@ -58,6 +87,8 @@ h1 {
 .recipe {
   background-color: var(---background-second-color-transparent);
   border-radius: var(---border-radius);
+  border: var(---border);
+  box-shadow: inset -2px -2px 10px #74ea62, 1px 1px 10px #74ea62;
   padding: 2rem;
   margin: 1rem;
   text-align: left;
@@ -90,6 +121,11 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .moreRandom {
+    width: 200px;
+    height: auto;
+  }
+
   .fav {
     margin: 0;
     align-self: flex-end;
@@ -126,5 +162,10 @@ p {
 @media screen and (min-width: 750px) {
   .cocktailContainer {
     margin: var(---marginDesktop);
+  }
+
+  button > img {
+    width: 100vh;
+    height: auto;
   }
 } ;

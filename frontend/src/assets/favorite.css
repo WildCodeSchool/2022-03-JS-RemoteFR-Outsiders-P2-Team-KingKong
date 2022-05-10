@@ -1,5 +1,5 @@
 .vignetteFavorite {
-  border-bottom: 3px solid #f19e50;
+  border-bottom: 3px solid var(---font-color-light);
   position: absolute;
   background-color: var(---font-color-dark);
   z-index: 2;

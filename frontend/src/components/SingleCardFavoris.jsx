@@ -7,7 +7,6 @@ import "@assets/style.css";
 function SingleCardFavoris({ idFavorite }) {
   const [drinks, setdrinks] = useState([]);
 
-  // console.log(idFavorite.idcocktail);
   useEffect(() => {
     const API = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idFavorite.idcocktail}`;
 

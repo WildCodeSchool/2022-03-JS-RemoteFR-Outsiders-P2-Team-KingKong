@@ -6,11 +6,13 @@
   border-bottom: thin solid var(---background-first-color);
 }
 .navigation {
-  background: var(---background-second-color);
+  background: var(---background-first-color);
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   padding: 0.7rem 0 0.3rem 0;
+  border-bottom: solid 0.5px var(---font-color-light);
+  border-top: solid 0.5px var(---font-color-light);
 }
 
 .navigation-bar {
@@ -33,7 +35,7 @@
 a {
   outline: none;
   text-decoration: none;
-  color: var(---background-first-color);
+  color: var(---font-color-light);
 }
 
 .nav-burger {
@@ -109,10 +111,10 @@ a {
     }
 
     .navigation-name:hover {
-      border-bottom: 2px solid var(---font-color-dark);
+      border-bottom: 2px solid var(---font-color-light);
     }
     .navigation-name:active {
-      border-bottom: 2px solid rgba(255, 255, 124, 0.675);
+      border-bottom: 2px solid var(---font-color-light);
     }
   }
 }
