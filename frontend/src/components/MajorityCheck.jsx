@@ -1,12 +1,11 @@
 import "../assets/MajorityCheck.css";
 import { useState } from "react";
 import logo from "@assets/banner-logo.svg";
-// import { layer } from "@fortawesome/fontawesome-svg-core";
+import "../assets/style.css";
 
 export default function MajorityCheck() {
   const logoStyle = {
-    width: "25rem",
-    marginBottom: "-3rem",
+    marginBottom: "auto",
   };
 
   const textStyle = {
