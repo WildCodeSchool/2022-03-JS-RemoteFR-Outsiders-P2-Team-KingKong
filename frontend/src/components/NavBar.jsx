@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "../assets/navbar.css";
-import { getCocktailByName } from "@services/getCocktail";
+import { getCocktailByName, getCocktailFromIds } from "@services/getCocktail";
 import SingleCard from "./SingleCard";
 
 function NavBar() {
   const [searchValue, setSearchValue] = useState("");
   const [cocktails, setCocktails] = useState([]);
   const [isShow, setIsShow] = useState(false);
+
   const [isShowLinks, setIsShowLinks] = useState(false);
 
   const handleShowLinks = () => {
@@ -30,16 +31,20 @@ function NavBar() {
   }, []);
 
   useEffect(async () => {
-    let empty = false;
+    let isEmpty = false;
     if (searchValue.length === 0) {
-      empty = true;
+      isEmpty = true;
     } else {
-      empty = false;
+      isEmpty = false;
     }
-    const cocktail = await getCocktailByName(searchValue, 10, empty);
+    const cocktail = await getCocktailByName(searchValue, 4, isEmpty);
     setCocktails(cocktail);
   }, [searchValue]);
 
+  useEffect(async () => {
+    const ingredient = await getCocktailFromIds(searchValue, 0);
+    setCocktails(ingredient);
+  }, []);
   return (
     <>
       <div className={`${isShow && "full-navigation"}`}>
@@ -71,19 +76,22 @@ function NavBar() {
           </button>
           <SearchBar
             searchValue={searchValue}
-            handleSearchValue={setSearchValue}
+            setSearchValue={setSearchValue}
           />
         </nav>
       </div>
       <div id="section-card">
-        {cocktails &&
-          cocktails.map((cocktail) => (
-            <SingleCard
-              image={cocktail.image}
-              id={cocktail.id}
-              title={cocktail.title}
-            />
-          ))}
+        <div className="vignette">
+          {cocktails &&
+            cocktails.map((cocktail) => (
+              <SingleCard
+                image={cocktail.image}
+                id={cocktail.id}
+                title={cocktail.title}
+                setSearchValue={setSearchValue}
+              />
+            ))}
+        </div>
       </div>
     </>
   );

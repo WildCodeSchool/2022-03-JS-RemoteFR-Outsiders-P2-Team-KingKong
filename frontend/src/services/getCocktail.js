@@ -76,16 +76,15 @@ const getCocktailById = async (idDrink) => {
     .then((data) => {
       for (let i = 0; i < data.drinks.length; i++) {
         const cocktail = {};
-        (cocktail.id = data.drinks[i].idDrink),
-          (cocktail.title = data.drinks[i].strDrink),
-          (cocktail.image = data.drinks[i].strDrinkThumb),
-          (cocktail.instructions = data.drinks[i].strInstructions),
-          (cocktail.ingredients = getIngredientsToArray(data.drinks[i])),
-          (cocktail.quantity = getMeasuresToArray(data.drinks[i])),
-          cocktailList.push(cocktail);
+        cocktail.id = data.drinks[i].idDrink;
+        cocktail.title = data.drinks[i].strDrink;
+        cocktail.image = data.drinks[i].strDrinkThumb;
+        cocktail.instructions = data.drinks[i].strInstructions;
+        cocktail.ingredients = getIngredientsToArray(data.drinks[i]);
+        cocktail.quantity = getMeasuresToArray(data.drinks[i]);
+        cocktailList.push(cocktail);
       }
     });
-
   return cocktailList[0];
 };
 

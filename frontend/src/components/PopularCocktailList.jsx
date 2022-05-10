@@ -7,14 +7,8 @@ function PopularCocktailList() {
   return (
     <div className="vignette">
       {Data.map((drink) => {
-        const { idDrink, strDrinkThumb, strDrink } = drink;
-        return (
-          <PopularCocktailCard
-            idDrink={idDrink}
-            strDrink={strDrink}
-            strDrinkThumb={strDrinkThumb}
-          />
-        );
+        const { id, image, title } = drink;
+        return <PopularCocktailCard id={id} title={title} image={image} />;
       })}
     </div>
   );

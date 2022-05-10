@@ -11,8 +11,6 @@ function Card() {
     const cocktail = await getCocktailByName(cocktails, 10, false);
     setCocktails(cocktail);
   }, [cocktails]);
-  // console.warn(cocktails);
-
   return (
     <div id="section-card">
       <div className="vignette">

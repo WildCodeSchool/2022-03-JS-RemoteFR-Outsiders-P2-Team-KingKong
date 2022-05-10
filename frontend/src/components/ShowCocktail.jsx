@@ -6,12 +6,12 @@ import { getCocktailById } from "@services/getCocktail";
 
 function ShowCocktail() {
   const params = useParams();
-  const [cocktail, setCocktail] = useState({});
+  const [cocktail, setCocktail] = useState([]);
 
   // Appel API
-  useEffect(() => {
-    getCocktailById(params.idDrink).then((data) => setCocktail(data));
-  }, []);
+  useEffect(async () => {
+    await getCocktailById(params.idDrink).then((data) => setCocktail(data));
+  }, [params.idDrink]);
 
   const [button, setButton] = useState(false);
   function clickButton() {
@@ -41,15 +41,11 @@ function ShowCocktail() {
         <div className="list-ingredients-quantity">
           <ul>
             {cocktail.ingredients &&
-              cocktail.ingredients.map((ingredient) => (
-                <li key={cocktail.id}>{ingredient}</li>
-              ))}
+              cocktail.ingredients.map((ingredient) => <li>{ingredient}</li>)}
           </ul>
           <ul>
             {cocktail.quantity &&
-              cocktail.quantity.map((measure) => (
-                <li key={cocktail.id}>{measure}</li>
-              ))}
+              cocktail.quantity.map((measure) => <li>{measure}</li>)}
           </ul>
         </div>
       </div>
