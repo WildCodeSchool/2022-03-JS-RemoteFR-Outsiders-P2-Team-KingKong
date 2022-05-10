@@ -21,8 +21,8 @@ function SingleCardFavoris({ idFavorite }) {
   }, []);
 
   return (
-    <div id="section-card">
-      <div className="vignette">
+    <div id="section-cardfavo">
+      <div className="vignetteFav">
         {drinks.map((nameDrink) => (
           <CardFavorite nameDrink={nameDrink} key={nameDrink.idDrink} />
         ))}

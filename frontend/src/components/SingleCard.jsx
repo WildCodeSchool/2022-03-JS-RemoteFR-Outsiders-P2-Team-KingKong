@@ -10,12 +10,12 @@ function SingleCard({ image, id, title }) {
       axios
         .post("http://localhost:5000/api/favorite", {
           id: 1,
-          idcocktail: nameDrink.idDrink,
+          idcocktail: id,
         })
         .then((res) => res.data);
     } else {
       axios
-        .delete(`http://localhost:5000/api/favorite/${nameDrink.idDrink}`)
+        .delete(`http://localhost:5000/api/favorite/${id}`)
         .then((res) => res.data);
     }
   }
