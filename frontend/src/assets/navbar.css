@@ -7,12 +7,27 @@
 }
 .navigation {
   background: var(---background-second-color);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0.7rem 0 0.3rem 0;
 }
 
 .navigation-bar {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-links-burger {
+  display: none;
+}
+
+.show-links-burger {
   display: flex;
-  justify-content: space-around;
-  list-style: none;
+  flex-direction: column-reverse;
+  padding-top: 1rem;
+  gap: 1rem;
 }
 
 a {
@@ -21,35 +36,83 @@ a {
   color: var(---background-first-color);
 }
 
-@media screen and (min-width: 768px) {
-  .full-navigation {
-    background-color: var(---background-second-color);
-    display: flex;
-    justify-content: center;
-  }
+.nav-burger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: transparent;
+  color: inherit;
+  margin: 0.5rem;
+}
+.nav-burger:hover {
+  cursor: pointer;
+}
+.burger-bar,
+.burger-bar::before,
+.burger-bar::after {
+  display: block;
+  width: 40px;
+  height: 3px;
+  position: relative;
+  border-radius: 3px;
+  background-color: #fff;
+}
 
-  .navigation {
-    display: flex;
-    align-items: center;
-    padding: var(---marginDesktop);
+.burger-bar::before,
+.burger-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger-bar::before {
+  transform: translateY(-12px);
+}
+
+.burger-bar::after {
+  transform: translateY(12px);
+}
+
+@media screen and (min-width: 378px) {
+  .nav-burger {
+    display: none;
   }
 
   .navigation-bar {
-    width: 60vw;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.8rem 0 0 0;
   }
 
-  .navigation-name {
-    padding-left: 2%;
-    padding-right: 2%;
+  .navigation {
+    flex-direction: column;
+
+    padding: var(---marginDesktop);
   }
 
-  .navigation-name:hover {
-    border-bottom: 2px solid var(---font-color-dark);
-  }
+  @media screen and (min-width: 900px) {
+    .full-navigation {
+      background-color: var(---background-second-color);
+    }
 
-  .navigation-name:active {
-    border-bottom: 2px solid rgba(255, 255, 124, 0.675);
+    .navigation {
+      flex-direction: row;
+    }
+    .navigation-bar {
+      padding-top: 0;
+    }
+
+    .navigation-name {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    .navigation-name:hover {
+      border-bottom: 2px solid var(---font-color-dark);
+    }
+    .navigation-name:active {
+      border-bottom: 2px solid rgba(255, 255, 124, 0.675);
+    }
   }
 }

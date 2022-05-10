@@ -1,11 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "@assets/Card.css";
 
 function SingleCard({ image, id, title, setSearchValue }) {
   const [button, setButton] = React.useState(false);
   function clickButton() {
     setButton(!button);
+    if (!button) {
+      axios
+        .post("http://localhost:5000/api/favorite", {
+          id: 1,
+          idcocktail: id,
+        })
+        .then((res) => res.data);
+    } else {
+      axios
+        .delete(`http://localhost:5000/api/favorite/${id}`)
+        .then((res) => res.data);
+    }
   }
   function handleClick() {
     setSearchValue("");
