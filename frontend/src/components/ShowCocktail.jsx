@@ -8,7 +8,6 @@ function ShowCocktail() {
   const params = useParams();
   const [cocktail, setCocktail] = useState([]);
 
-  // Appel API
   useEffect(async () => {
     await getCocktailById(params.idDrink).then((data) => setCocktail(data));
   }, [params.idDrink]);
@@ -51,10 +50,7 @@ function ShowCocktail() {
       </div>
       <div className="row" />
       <div className="recipe">
-        <h2>
-          <i className="em em-tropical_drink" aria-label="TROPICAL DRINK" />
-          Recipe
-        </h2>
+        <h2>Recipe</h2>
         <p>{cocktail.instructions}</p>
       </div>
     </div>

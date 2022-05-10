@@ -12,16 +12,14 @@ function Card() {
     setCocktails(cocktail);
   }, [cocktails]);
   return (
-    <div id="section-card">
-      <div className="vignette">
-        {cocktails.map((cocktail) => (
-          <SingleCard
-            image={cocktail.image}
-            id={cocktail.id}
-            title={cocktail.title}
-          />
-        ))}
-      </div>
+    <div className="vignette">
+      {cocktails.map((cocktail) => (
+        <SingleCard
+          image={cocktail.image}
+          id={cocktail.id}
+          title={cocktail.title}
+        />
+      ))}
     </div>
   );
 }
