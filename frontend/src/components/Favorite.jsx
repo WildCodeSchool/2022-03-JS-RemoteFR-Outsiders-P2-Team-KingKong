@@ -17,7 +17,7 @@ function Favorite() {
         setdata(data2);
       })
       .catch((e) => console.error(e));
-  }, []);
+  }, [data]);
 
   return (
     <div id="section-cardFavorite">
