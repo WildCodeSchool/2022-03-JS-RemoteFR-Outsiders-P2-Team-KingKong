@@ -43,7 +43,7 @@ function SingleCard({ nameDrink }) {
         </button>
 
         <h2>{nameDrink.strDrink}</h2>
-        <p>cocktail recipe</p>
+        
       </div>
     </article>
   );
