@@ -20,7 +20,7 @@ h1 {
   border-radius: var(---border-radius);
 }
 
-button > img:hover {
+.wizz:hover {
   animation: shake 0.82s;
 }
 @keyframes shake {

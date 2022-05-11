@@ -3,7 +3,6 @@ import { useState } from "react";
 import logo from "@assets/banner-logo.svg";
 import "../assets/style.css";
 
-
 export default function MajorityCheck() {
   const logoStyle = {
     marginBottom: "auto",

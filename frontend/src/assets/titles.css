@@ -1,0 +1,8 @@
+.titles {
+  background-color: var(---background-first-color);
+  color: var(---font-color-light);
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 4%;
+  text-align: center;
+}
