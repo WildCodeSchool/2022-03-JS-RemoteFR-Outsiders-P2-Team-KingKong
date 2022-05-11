@@ -1,0 +1,171 @@
+.cocktailContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  margin: 2rem 0 0 0;
+  color: var(---font-color-light);
+}
+
+.moreRandom {
+  width: 80px;
+  height: auto;
+  font-size: var(---font-size--p);
+  margin: 0 auto;
+  padding: 0;
+  color: var(---font-color-light);
+  background-color: var(---background-second-color-transparent);
+  border-color: var(---background-second-color);
+  border-radius: var(---border-radius);
+}
+
+.wizz:hover {
+  animation: shake 0.82s;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.fav {
+  color: var(---font-color-light);
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.heart {
+  font-size: 2rem;
+  background-color: transparent;
+  border: 0;
+}
+.fa-regular {
+  color: var(---font-color-light);
+  cursor: pointer;
+}
+
+.ingredients {
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 2rem 0 2rem 0;
+  background-color: var(---background-second-color-transparent);
+  width: 60%;
+  border-radius: var(---border-radius);
+  border: var(---border);
+  box-shadow: inset -2px -2px 10px #74ea62, 1px 1px 10px #74ea62;
+  align-self: center;
+  text-align: center;
+}
+
+.list-ingredients-quantity {
+  display: flex;
+  justify-content: space-around;
+}
+.row {
+  height: 0.1rem;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 0.7rem;
+  background-color: var(---background-second-color);
+}
+.recipe {
+  background-color: var(---background-second-color-transparent);
+  border-radius: var(---border-radius);
+  border: var(---border);
+  box-shadow: inset -2px -2px 10px #74ea62, 1px 1px 10px #74ea62;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: left;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  text-align: left;
+  line-height: var(---line-height--ul);
+}
+
+h2 {
+  margin: 0 0 0.8rem 0;
+}
+
+img {
+  width: 100%;
+}
+p {
+  line-height: var(---line-height--p);
+}
+
+@media screen and (min-width: 378px) {
+  .cocktailContainer {
+    margin: var(---marginTablet);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .moreRandom {
+    width: 200px;
+    height: auto;
+  }
+
+  .fav {
+    margin: 0;
+    align-self: flex-end;
+  }
+  .drinkName {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .ingredients {
+    margin: 0;
+    min-width: 10%;
+    height: auto;
+  }
+  .cocktailContainer img {
+    border-radius: var(---border-radius);
+    max-width: 30%;
+    height: auto;
+    margin-top: 2vh;
+    align-self: center;
+  }
+  .recipe {
+    margin: 0;
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  .row {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .cocktailContainer {
+    margin: var(---marginDesktop);
+  }
+
+  button > img {
+    width: 100vh;
+    height: auto;
+  }
+} ;

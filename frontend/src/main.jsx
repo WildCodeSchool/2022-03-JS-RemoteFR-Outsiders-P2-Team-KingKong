@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import MajorityCheck from "./components/MajorityCheck";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
+    <MajorityCheck />
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById("root")
 );

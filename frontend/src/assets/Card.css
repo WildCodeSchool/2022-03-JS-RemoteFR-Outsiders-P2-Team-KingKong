@@ -1,0 +1,81 @@
+.imgCocktail {
+  width: 100%;
+}
+
+.vignette {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articleVignette {
+  display: flex;
+  width: clamp(15rem, 20rem, 23rem);
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 15px;
+  margin-top: 20%;
+  background-color: var(---background-second-color-transparent);
+  border-radius: var(---border-radius);
+  border: var(---border);
+  box-shadow: inset -2px -2px 10px #74ea62, 1px 1px 10px #74ea62;
+}
+
+.fa-heart {
+  color: rgb(143, 10, 10);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+article.articleVignette:nth-child(n) > div:nth-child(n) > button:nth-child(n) {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.blocText {
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+}
+.blocText h2 {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.remove-style {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+@media screen and (min-width: 768px) {
+  .articleVignette {
+    display: flex;
+    width: clamp(5rem, 12rem, 12rem);
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .vignette {
+    margin: var(---marginDesktop);
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .articleVignette > img {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+}

@@ -15,9 +15,11 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
+
   "plugins": ["react", "import"],
   "rules": {
     "no-console": "off",
+    "react/prop-types": 0,
     "no-restricted-syntax": [
       "error",
       {
@@ -26,7 +28,8 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "no-restricted-globals": ["error", "event", "fdescribe"]
   },
   "settings": {
     "import/resolver": {

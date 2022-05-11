@@ -1,0 +1,44 @@
+.btn {
+  width: 20%;
+  background-color: var(---font-color-light);
+  border: thin solid var(---background-first-color);
+}
+
+.image-logo {
+  width: 40px;
+  background-color: white;
+  padding: 2%;
+}
+
+.input {
+  width: 80vw;
+  padding: 2%;
+  color: var(---background-first-color);
+  font-weight: 500;
+}
+
+.searchbar {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.full-searchbar {
+  display: flex;
+  justify-content: center;
+  background: var(---background-second-color);
+}
+
+@media screen and (min-width: 768px) {
+  .full-searchbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+  }
+
+  .searchbar {
+    width: 40vw;
+    margin-right: 3%;
+  }
+}

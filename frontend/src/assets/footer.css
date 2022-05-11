@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+  background: var(---background-first-color);
+  width: 100%;
+  font-family: "Overpass";
+  bottom: 0;
+  display: flex;
+  padding: 0.8rem 0 0rem 0;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.mention p {
+  font-weight: 600;
+}
+
+.copyright p {
+  font-size: 0.9rem;
+}

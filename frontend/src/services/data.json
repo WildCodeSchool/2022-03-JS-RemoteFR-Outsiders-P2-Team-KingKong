@@ -1,0 +1,52 @@
+[
+  {
+    "id": "11000",
+    "title": "Mojito",
+    "image": "https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg"
+  },
+  {
+    "id": "17215",
+    "title": "Spritz",
+    "image": "https://www.thecocktaildb.com/images/media/drink/j9evx11504373665.jpg"
+  },
+  {
+    "id": "178365",
+    "title": "Gin Tonic",
+    "image": "https://www.thecocktaildb.com/images/media/drink/qcgz0t1643821443.jpg"
+  },
+  {
+    "id": "13621",
+    "title": "Tequila Sunrise",
+    "image": "https://www.thecocktaildb.com/images/media/drink/quqyqp1480879103.jpg"
+  },
+  {
+    "id": "11007",
+    "title": "Margarita",
+    "image": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg"
+  },
+  {
+    "id": "11113",
+    "title": "Bloody Mary",
+    "image": "https://www.thecocktaildb.com/images/media/drink/t6caa21582485702.jpg"
+  },
+  {
+    "id": "17207",
+    "title": "Piña Colada",
+    "image": "https://www.thecocktaildb.com/images/media/drink/cpf4j51504371346.jpg"
+  },
+  {
+    "id": "11202",
+    "title": "Caipirinhia",
+    "image": "https://www.thecocktaildb.com/images/media/drink/jgvn7p1582484435.jpg"
+  },
+  {
+    "id": "11008",
+    "title": "Manhattan",
+    "image": "https://www.thecocktaildb.com/images/media/drink/yk70e31606771240.jpg"
+  },
+  {
+    "id": "12748",
+    "title": "Orange Scented Hot Chocolate",
+    "image": "https://www.thecocktaildb.com/images/media/drink/hdzwrh1487603131.jpg"
+  }
+]
