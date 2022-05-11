@@ -3,6 +3,8 @@ import "../assets/showCocktail.css";
 import "../assets/style.css";
 import { useParams } from "react-router-dom";
 import { getCocktailById } from "@services/getCocktail";
+import axios from "axios";
+
 
 function ShowCocktail() {
   const params = useParams();
@@ -15,6 +17,18 @@ function ShowCocktail() {
   const [button, setButton] = useState(false);
   function clickButton() {
     setButton(!button);
+    if (!button) {
+      axios
+        .post("http://localhost:5000/api/favorite", {
+          id: 1,
+          idcocktail: cocktail.id,
+        })
+        .then((res) => res.data);
+    } else {
+      axios
+        .delete(`http://localhost:5000/api/favorite/${cocktail.id}`)
+        .then((res) => res.data);
+    }
   }
 
   return (
