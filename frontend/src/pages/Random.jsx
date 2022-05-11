@@ -25,7 +25,7 @@ function Random() {
       <div className="cocktailContainer">
         {" "}
         <button type="button" className="moreRandom" onClick={handleClick}>
-          <img src="../src/assets/drink.svg" alt="" className="image" />
+          <img src="../src/assets/drink.svg" alt="logo" className="wizz" />
           <p>Click for more!</p>
         </button>
         <div className="drinkName">
