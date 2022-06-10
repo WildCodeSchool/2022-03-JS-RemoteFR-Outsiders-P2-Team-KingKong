@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { getCocktailById } from "@services/getCocktail";
 import axios from "axios";
 
-
 function ShowCocktail() {
   const params = useParams();
   const [cocktail, setCocktail] = useState([]);
